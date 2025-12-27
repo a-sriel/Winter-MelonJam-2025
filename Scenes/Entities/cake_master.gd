@@ -2,6 +2,7 @@
 # https://github.com/Brackeys/brackeys-proto-controller/blob/main/proto_controller/proto_controller.gd
 
 extends CharacterBody3D
+class_name CakeMaster
 
 @export var LOOK_SPEED : float = .0015
 @export var BASE_SPEED : float = 7
@@ -15,6 +16,9 @@ extends CharacterBody3D
 var move_speed : float = 0
 var mouse_captured : bool = false
 var look_rotation : Vector2
+
+func _ready() -> void:
+	capture_mouse()
 
 #TODO: Optimize this
 func _process(_delta: float) -> void:

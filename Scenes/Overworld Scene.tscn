@@ -1,0 +1,96 @@
+[gd_scene load_steps=7 format=3 uid="uid://betfqgwta40em"]
+
+[ext_resource type="Script" uid="uid://bxr68sl4epoum" path="res://Scenes/overworld_scene.gd" id="1_vsp5g"]
+[ext_resource type="PackedScene" uid="uid://drdpvnbqqh62w" path="res://Scenes/Entities/Cake Master.tscn" id="2_x04ao"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_idj7w"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_vsp5g"]
+sky_material = SubResource("ProceduralSkyMaterial_idj7w")
+
+[sub_resource type="Environment" id="Environment_rgh2o"]
+background_mode = 2
+sky = SubResource("Sky_vsp5g")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kln2b"]
+size = Vector3(6.5, 4, 1.75)
+
+[node name="Overworld Scene" type="Node3D"]
+script = ExtResource("1_vsp5g")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rgh2o")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.4539906, 0.89100647, 0, -0.89100647, -0.4539906, 0, 6.75, 0)
+shadow_enabled = true
+
+[node name="Floor" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.25)
+use_collision = true
+collision_mask = 0
+size = Vector3(25, 0.1, 31.5)
+
+[node name="Player" parent="." instance=ExtResource("2_x04ao")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2, 0, -4)
+
+[node name="Bakery" type="CSGCombiner3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Bakery"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0.47500002, 0.75, -5.25)
+size = Vector3(0.25, 1, 0.25)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Bakery"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 1.975, 0.75, -2.75)
+size = Vector3(0.25, 1, 0.25)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Bakery"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.225, 1.525, -4)
+size = Vector3(1.75, 0.05, 2.75)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Bakery"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 1.975, 0.75, -5.25)
+size = Vector3(0.25, 1, 0.25)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Bakery"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0.47500002, 0.75, -2.75)
+size = Vector3(0.25, 1, 0.25)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Bakery"]
+transform = Transform3D(2.255, 0, 0, 0, 2.255, 0, 0, 0, 2.255, 0.48524994, -0.2255, -4)
+size = Vector3(0.125, 0.8, 1)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Bakery"]
+transform = Transform3D(1.5945256, 1.5945258, 0, -1.5945258, 1.5945256, 0, 0, 0, 2.2550004, -0.08975006, 0.124500036, -4)
+operation = 2
+size = Vector3(0.125, 0.8, 1)
+
+[node name="Cave" type="Node3D" parent="."]
+
+[node name="Cave Enterance" type="CSGCombiner3D" parent="Cave"]
+use_collision = true
+collision_mask = 0
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Cave/Cave Enterance"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 15.625)
+size = Vector3(25, 5.5, 6.25)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Cave/Cave Enterance"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 8.455423e-08, 15.184375)
+operation = 2
+radius = 3.0
+height = 5.86875
+
+[node name="Enterance Trigger" type="Area3D" parent="Cave"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.75)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cave/Enterance Trigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 1.5, -0.375)
+shape = SubResource("BoxShape3D_kln2b")
+
+[connection signal="body_entered" from="Cave/Enterance Trigger" to="." method="_on_enterance_trigger_body_entered"]
