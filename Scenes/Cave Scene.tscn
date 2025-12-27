@@ -60,19 +60,6 @@ transform = Transform3D(1, 0, 0, 0, -0.4539906, 0.89100647, 0, -0.89100647, -0.4
 visible = false
 shadow_enabled = true
 
-[node name="Floor" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -32.25)
-use_collision = true
-collision_mask = 0
-size = Vector3(68, 0.1, 102.5)
-
-[node name="Ceiling" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 3.25)
-visible = false
-use_collision = true
-collision_mask = 0
-size = Vector3(25, 0.1, 31.5)
-
 [node name="Player" parent="." instance=ExtResource("1_bkos3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13)
 
@@ -81,202 +68,243 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13)
 [node name="21" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(0.3, 0, 0, 0, 0.5, 0, 0, 0, 6, -0.25, 0.075, 12.974999)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="11" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(-1.3113416e-08, 0, 2.9999998, 0, 0.5, 0, -0.29999998, 0, -1.3113416e-07, -3, 0.075, 6.825)
 mesh = SubResource("PlaneMesh_py0mi")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="22" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(-1.3113416e-08, 0, 5.9999995, 0, 0.5, 0, -0.29999998, 0, -2.6226832e-07, -12, 0.075, 6.825)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="12" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(0.3, 0, 0, 0, 0.5, 0, 0, 0, 3, -17.75, 0.075, 3.5749998)
 mesh = SubResource("PlaneMesh_py0mi")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="13" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(-1.3113416e-08, 0, -2.9999998, 0, 0.5, 0, 0.29999998, 0, -1.3113416e-07, -15, 0.075, 0.3249998)
 mesh = SubResource("PlaneMesh_py0mi")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="23" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(0.3, 0, 0, 0, 0.5, 0, 0, 0, 6, -11.75, 0.075, -5.425)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="24" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(-1.3113416e-08, 0, 5.9999995, 0, 0.5, 0, -0.29999998, 0, -2.6226832e-07, -5.5, 0.075, -11.175)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="25" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(-1.3113416e-08, 0, 5.9999995, 0, 0.5, 0, -0.29999998, 0, -2.6226832e-07, 6.5, 0.075, -11.175)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="26" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(0.3, 0, 0, 0, 0.5, 0, 0, 0, 6, 12.25, 0.075, -4.925)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="14" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(-1.3113416e-08, 0, 2.9999998, 0, 0.5, 0, -0.29999998, 0, -1.3113416e-07, 15.5, 0.075, 0.8249998)
 mesh = SubResource("PlaneMesh_py0mi")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="27" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(0.3, 0, 0, 0, 0.5, 0, 0, 0, 6, 18.75, 0.075, 6.575)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="28" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(-1.3113416e-08, 0, 5.9999995, 0, 0.5, 0, -0.29999998, 0, -2.6226832e-07, 24.5, 0.075, 12.825)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="15" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(0.3, 0, 0, 0, 0.5, 0, 0, 0, 3, 30.75, 0.075, 10.075)
 mesh = SubResource("PlaneMesh_py0mi")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="29" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(0.3, 0, 0, 0, 0.5, 0, 0, 0, 6, 30.75, 0.075, 1.0749998)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="30" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(-1.3113416e-08, 0, -5.9999995, 0, 0.5, 0, 0.29999998, 0, -2.6226832e-07, 36.5, 0.075, -5.175)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="31" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(0.29999998, 0, 2.842171e-14, 0, 0.5, 0, 0, 0, 5.9999995, 42.25, 0.075, -11.425)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="32" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(0.29999998, 0, 2.842171e-14, 0, 0.5, 0, 0, 0, 5.9999995, 42.25, 0.075, -35.425)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="33" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(-1.3113416e-08, 0, 5.9999995, 0, 0.5, 0, -0.29999998, 0, -2.6226834e-07, 36.5, 0.075, -41.675)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="35" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(-0.29999998, 0, -5.2453663e-07, 0, 0.5, 0, 2.6226832e-08, 0, -5.9999995, 12.75, 0.075, -35.425)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="38" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(-0.29999998, 0, -5.2453663e-07, 0, 0.5, 0, 2.6226832e-08, 0, -5.9999995, 0.25, 0.075, -41.425)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="39" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(-0.29999998, 0, -5.2453663e-07, 0, 0.5, 0, 2.6226832e-08, 0, -5.9999995, 0.25, 0.075, -53.425)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="40" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(-1.3113416e-08, 0, 5.9999995, 0, 0.5, 0, -0.29999998, 0, -2.622683e-07, -6, 0.075, -59.175)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="41" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(0.29999998, 0, -5.684342e-14, 0, 0.5, 0, 8.881784e-16, 0, 5.9999995, -12.25, 0.075, -64.925)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="42" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(-1.3113415e-08, 0, 5.9999995, 0, 0.5, 0, -0.29999998, 0, -2.6226826e-07, -6.5, 0.075, -71.175)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="43" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(-1.3113415e-08, 0, 5.9999995, 0, 0.5, 0, -0.29999998, 0, -2.6226826e-07, 5.5, 0.075, -71.175)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="44" type="MeshInstance3D" parent="Cake Trail"]
-transform = Transform3D(-1.3113415e-08, 0, 5.9999995, 0, 0.5, 0, -0.29999998, 0, -2.6226826e-07, 17.5, 0.075, -71.175)
+transform = Transform3D(0.29999998, 0, -8.526513e-14, 0, 0.5, 0, -8.881784e-16, 0, 5.9999995, 11.25, 0.075, -64.925)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="45" type="MeshInstance3D" parent="Cake Trail"]
-transform = Transform3D(-1.3113415e-08, 0, 5.9999995, 0, 0.5, 0, -0.29999998, 0, -2.6226826e-07, 29.5, 0.075, -71.175)
+transform = Transform3D(-1.3113415e-08, 0, 5.9999995, 0, 0.5, 0, -0.29999998, 0, -2.6226826e-07, 17.5, 0.075, -59.175003)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="46" type="MeshInstance3D" parent="Cake Trail"]
-transform = Transform3D(-1.3113415e-08, 0, 5.9999995, 0, 0.5, 0, -0.29999998, 0, -2.6226826e-07, 41.5, 0.075, -71.175)
+transform = Transform3D(-0.29999998, 0, -5.245365e-07, 0, 0.5, 0, 2.6226832e-08, 0, -5.9999995, 35.25, 0.075, -65.425)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
+
+[node name="48" type="MeshInstance3D" parent="Cake Trail"]
+transform = Transform3D(-1.3113419e-08, 0, 5.9999995, 0, 0.5, 0, -0.29999998, 0, -2.6226817e-07, 41, 0.075, -71.675)
+mesh = SubResource("PlaneMesh_3cfdu")
+skeleton = NodePath("../Cake Trail Building Blocks")
+
+[node name="47" type="MeshInstance3D" parent="Cake Trail"]
+transform = Transform3D(-1.3113415e-08, 0, 5.9999995, 0, 0.5, 0, -0.29999998, 0, -2.6226826e-07, 29.5, 0.075, -59.175003)
+mesh = SubResource("PlaneMesh_3cfdu")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="36" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(-1.3113416e-08, 0, 5.9999995, 0, 0.5, 0, -0.29999998, 0, -2.622683e-07, 6.5, 0.075, -29.675)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="34" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(-1.3113416e-08, 0, 5.9999995, 0, 0.5, 0, -0.29999998, 0, -2.6226834e-07, 24.5, 0.075, -41.675)
 mesh = SubResource("PlaneMesh_3cfdu")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="16" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(0.3, 0, 0, 0, 0.5, 0, 0, 0, 3, 42.25, 0.075, -20.425)
 mesh = SubResource("PlaneMesh_py0mi")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="17" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(-1.3113416e-08, 0, 2.9999998, 0, 0.5, 0, -0.29999998, 0, -1.3113416e-07, 39.5, 0.075, -23.675)
 mesh = SubResource("PlaneMesh_py0mi")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="18" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(0.29999998, 0, -1.4210855e-14, 0, 0.5, 0, 0, 0, 2.9999998, 36.25, 0.075, -26.425)
 mesh = SubResource("PlaneMesh_py0mi")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="37" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(0.29999998, 0, -1.4210855e-14, 0, 0.5, 0, 0, 0, 2.9999998, 0.25, 0.075, -32.425)
 mesh = SubResource("PlaneMesh_py0mi")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="19" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(-1.3113416e-08, 0, -2.9999998, 0, 0.5, 0, 0.29999998, 0, -1.3113417e-07, 39.5, 0.075, -29.175)
 mesh = SubResource("PlaneMesh_py0mi")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
 [node name="20" type="MeshInstance3D" parent="Cake Trail"]
 transform = Transform3D(-1.3113416e-08, 0, -2.9999998, 0, 0.5, 0, 0.29999998, 0, -1.3113417e-07, 15.5, 0.075, -41.675)
 mesh = SubResource("PlaneMesh_py0mi")
-skeleton = NodePath("../../Cake Trail Building Blocks")
+skeleton = NodePath("../Cake Trail Building Blocks")
 
-[node name="Cake Trail Building Blocks" type="Node3D" parent="."]
+[node name="Cake Trail Building Blocks" type="Node3D" parent="Cake Trail"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 0, 22.5)
 
-[node name="20" type="MeshInstance3D" parent="Cake Trail Building Blocks"]
+[node name="20" type="MeshInstance3D" parent="Cake Trail/Cake Trail Building Blocks"]
 transform = Transform3D(0.3, 0, 0, 0, 0.5, 0, 0, 0, 6, 1.25, 0.075, 11.325)
 mesh = SubResource("PlaneMesh_3cfdu")
 
-[node name="10" type="MeshInstance3D" parent="Cake Trail Building Blocks"]
+[node name="10" type="MeshInstance3D" parent="Cake Trail/Cake Trail Building Blocks"]
 transform = Transform3D(0.3, 0, 0, 0, 0.5, 0, 0, 0, 3, 0, 0.075, 11.325)
 mesh = SubResource("PlaneMesh_py0mi")
 
-[node name="5" type="MeshInstance3D" parent="Cake Trail Building Blocks"]
+[node name="5" type="MeshInstance3D" parent="Cake Trail/Cake Trail Building Blocks"]
 transform = Transform3D(0.3, 0, 0, 0, 0.5, 0, 0, 0, 1.5, -1, 0.075, 11.325)
 mesh = SubResource("PlaneMesh_h3cb0")
 
-[node name="3" type="MeshInstance3D" parent="Cake Trail Building Blocks"]
+[node name="3" type="MeshInstance3D" parent="Cake Trail/Cake Trail Building Blocks"]
 transform = Transform3D(0.3, 0, 0, 0, 0.5, 0, 0, 0, 0.9, -2, 0.075, 11.325)
 mesh = SubResource("PlaneMesh_j3o5c")
 
-[node name="1" type="MeshInstance3D" parent="Cake Trail Building Blocks"]
+[node name="1" type="MeshInstance3D" parent="Cake Trail/Cake Trail Building Blocks"]
 transform = Transform3D(0.3, 0, 0, 0, 0.25, 0, 0, 0, 0.3, -3, 0.075, 11.325)
 mesh = SubResource("PlaneMesh_76d20")
+
+[node name="Outer Walls" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Outer Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.875, 19.5)
+size = Vector3(70.5, 2.75, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Outer Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.875, -84)
+size = Vector3(70.5, 2.75, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Outer Walls"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 44.5, 0.875, -32.375)
+size = Vector3(106.75, 2.75, 1)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Outer Walls"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -24.5, 0.875, -32.375)
+size = Vector3(106.75, 2.75, 1)
+
+[node name="Floor" type="CSGBox3D" parent="Outer Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -32.25)
+use_collision = true
+collision_mask = 0
+size = Vector3(68, 0.1, 102.5)
+
+[node name="Ceiling" type="CSGBox3D" parent="Outer Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2.25, -32.25)
+use_collision = true
+collision_mask = 0
+size = Vector3(68, 0.1, 102.5)
