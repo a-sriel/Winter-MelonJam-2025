@@ -8,12 +8,20 @@ extends CharacterBody3D
 @export var SPRINT_SPEED : float = 10
 @export var JUMP_SPEED : float = 4.5
 
-@onready var head: Node3D = $Head
+@onready var head: Node3D = %Head
+@onready var ferret: Node3D = %ferret
+@onready var anim: AnimationPlayer = %ferret.get_child(1)
 
 var move_speed : float = 0
 var mouse_captured : bool = false
 var look_rotation : Vector2
 
+#TODO: Optimize this
+func _process(_delta: float) -> void:
+	if self.get_real_velocity():
+		anim.play("Armature|Walk")
+	else:
+		anim.play("Armature|_TPose")
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Mouse capturing
@@ -61,6 +69,7 @@ func rotate_look(rot_input : Vector2):
 	look_rotation.x -= rot_input.y * LOOK_SPEED
 	look_rotation.x = clamp(look_rotation.x, deg_to_rad(-85), deg_to_rad(85))
 	look_rotation.y -= rot_input.x * LOOK_SPEED
+	
 	self.transform.basis = Basis()
 	self.rotate_y(look_rotation.y)
 	head.transform.basis = Basis()

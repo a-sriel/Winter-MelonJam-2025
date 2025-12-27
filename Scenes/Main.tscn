@@ -24,13 +24,15 @@ environment = SubResource("Environment_rgh2o")
 transform = Transform3D(1, 0, 0, 0, 0.544639, 0.8386706, 0, -0.8386706, 0.544639, 0, 6.75, 0)
 shadow_enabled = true
 
+[node name="Floor" type="CSGBox3D" parent="."]
+use_collision = true
+collision_mask = 0
+size = Vector3(10, 0.1, 10)
+metadata/_edit_lock_ = true
+
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 use_collision = true
 collision_mask = 0
-
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
-size = Vector3(5, 0.1, 5)
-metadata/_edit_lock_ = true
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, 0.5)
