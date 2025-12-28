@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://7xxo58sbwhuo"]
+
+[ext_resource type="Script" path="res://Scenes/Pie/pie.gd" id="1_3ng8t"]
+[ext_resource type="PackedScene" uid="uid://fr01ef2s6gal" path="res://Assets/Objects/Pie.fbx" id="2_7o8od"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_fadgh"]
+radius = 0.125
+
+[node name="Pie" type="RigidBody3D"]
+collision_layer = 0
+collision_mask = 0
+freeze = true
+script = ExtResource("1_3ng8t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_fadgh")
+
+[node name="Death Timer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+
+[node name="Pie" parent="." instance=ExtResource("2_7o8od")]
+transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0, 0, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Death Timer" to="." method="_on_death_timer_timeout"]
