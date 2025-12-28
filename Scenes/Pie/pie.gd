@@ -6,6 +6,7 @@ class_name Pie
 
 var can_throw : bool = true
 
+
 func throw(dir:Vector3, force:float) -> void:
 	if not can_throw:
 		return
