@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://drdpvnbqqh62w"]
+[gd_scene load_steps=5 format=3 uid="uid://drdpvnbqqh62w"]
 
 [ext_resource type="PackedScene" uid="uid://qoaxbwrr1jk1" path="res://Assets/Characters/ferret.fbx" id="1_al6m7"]
 [ext_resource type="Script" uid="uid://3slsttieqbc5" path="res://Scenes/Entities/cake_master.gd" id="1_fadgh"]
@@ -6,6 +6,9 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c77oj"]
 radius = 0.25
 height = 1.625
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_fadgh"]
+radius = 0.125
 
 [node name="Cake Master" type="CharacterBody3D"]
 script = ExtResource("1_fadgh")
@@ -18,9 +21,43 @@ shape = SubResource("CapsuleShape3D_c77oj")
 unique_name_in_owner = true
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 
+[node name="Skeleton3D" parent="ferret/Armature" index="0"]
+bones/1/rotation = Quaternion(-0.0477637, 0.0025912914, -0.38492122, 0.92170906)
+bones/2/rotation = Quaternion(0.05684322, 0.018254308, -0.14500175, 0.9876285)
+bones/3/rotation = Quaternion(0.025353624, -0.004159394, -0.009337678, 0.99962634)
+bones/4/rotation = Quaternion(-0.040673237, -0.0035948507, -0.22374272, 0.9737927)
+bones/6/rotation = Quaternion(-0.019265564, -0.23282744, 0.775884, 0.5860242)
+bones/7/rotation = Quaternion(0.05109109, 0.67635447, 0.15352607, 0.7185848)
+bones/9/rotation = Quaternion(0.7751574, -0.564964, -0.18274705, 0.21575513)
+bones/10/rotation = Quaternion(0.10820295, -0.62583834, -0.20351408, 0.7451178)
+bones/12/rotation = Quaternion(0.7070896, 0.00496316, 0.70708925, -0.004963163)
+bones/13/rotation = Quaternion(-0.1568466, -2.146262e-07, 2.6824818e-08, 0.987623)
+bones/14/rotation = Quaternion(-0.19712703, -8.5706894e-08, 9.399759e-08, 0.980378)
+bones/17/rotation = Quaternion(0.061177492, 0.83577114, -0.17071709, -0.5182661)
+bones/20/rotation = Quaternion(-0.061176866, 0.8357711, -0.17071763, 0.51826596)
+bones/24/rotation = Quaternion(-0.70710474, 0.0016464272, 0.7071051, -0.0016088587)
+bones/26/rotation = Quaternion(-0.7071044, 0.0016462388, 0.70710546, -0.0016088587)
+
 [node name="Head" type="Node3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
 fov = 90.0
+
+[node name="Hand" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.5, -0.275)
+
+[node name="Pie" type="RigidBody3D" parent="Hand"]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 0
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Pie"]
+shape = SubResource("SphereShape3D_fadgh")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Hand/Pie"]
+radius = 0.125
+
+[editable path="ferret"]

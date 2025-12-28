@@ -8,10 +8,13 @@ class_name CakeMaster
 @export var BASE_SPEED : float = 7
 @export var SPRINT_SPEED : float = 10
 @export var JUMP_SPEED : float = 4.5
+@export var THROW_FORCE: float = 10
 
 @onready var head: Node3D = %Head
+@onready var cam: Camera3D = head.get_child(0)
 @onready var ferret: Node3D = %ferret
 @onready var anim: AnimationPlayer = %ferret.get_child(1)
+@onready var pie: RigidBody3D = %Pie
 
 var move_speed : float = 0
 var mouse_captured : bool = false
@@ -37,6 +40,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	# Look around
 	if mouse_captured and event is InputEventMouseMotion:
 		rotate_look(event.relative) # passes mouse position relative to the previous position (position at the last frame)
+	
+	if Input.is_action_just_pressed("action_fire"):
+		throw_pie()
 
 func _physics_process(delta: float) -> void:
 	
@@ -86,3 +92,14 @@ func capture_mouse():
 func release_mouse():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	mouse_captured = false
+
+func throw_pie() -> void:
+	var clone : RigidBody3D = pie.duplicate()
+	get_tree().current_scene.add_child(clone)
+	clone.global_position = pie.global_position
+	clone.set_collision_mask_value(1, true) # pie will scan for walls
+	clone.set_collision_mask_value(2, true) # pie will scan for enemies
+	
+	# Calc throw direction
+	var forward_dir := -cam.get_global_transform().basis.z
+	clone.apply_central_impulse(Vector3.ONE * THROW_FORCE * forward_dir)
