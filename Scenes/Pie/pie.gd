@@ -7,17 +7,19 @@ func throw(dir:Vector3, force:float) -> void:
 	var clone : RigidBody3D = self.duplicate()
 	get_tree().current_scene.add_child(clone)
 	
+	# Collisions
 	clone.global_position = self.global_position
 	clone.set_collision_mask_value(1, true) # pie will scan for walls
 	clone.set_collision_mask_value(2, true) # pie will scan for enemies
 	clone.contact_monitor = true
 	clone.max_contacts_reported = 1
 	
+	# Movement
 	clone.freeze = false
 	var random_torque = Vector3(randf_range(-.1, .1), randf_range(-.1, .1), randf_range(-.1, .1))
-	print(random_torque)
 	clone.apply_central_impulse(Vector3.ONE * force * dir)
 	clone.apply_torque_impulse(random_torque)
+	
 	clone.death_timer.start()
 
 # Freeze on any collision
