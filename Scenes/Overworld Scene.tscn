@@ -1,11 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://betfqgwta40em"]
+[gd_scene load_steps=17 format=3 uid="uid://betfqgwta40em"]
 
 [ext_resource type="Script" uid="uid://bxr68sl4epoum" path="res://Scenes/overworld_scene.gd" id="1_vsp5g"]
 [ext_resource type="PackedScene" uid="uid://drdpvnbqqh62w" path="res://Scenes/Entities/Cake Master.tscn" id="2_x04ao"]
 [ext_resource type="Texture2D" uid="uid://cptqo4sa5ohln" path="res://Assets/Graphics/grass.png" id="2_x80r2"]
 [ext_resource type="Texture2D" uid="uid://dnurccw1qyc8q" path="res://Assets/Graphics/banner.png" id="3_7gtkn"]
-[ext_resource type="Texture2D" uid="uid://cqqe0ugnie4us" path="res://icon.svg" id="3_x04ao"]
 [ext_resource type="Texture2D" uid="uid://cb0xbyidjdmc4" path="res://Assets/Graphics/cave_wall1.png" id="5_s8qc7"]
+[ext_resource type="Texture2D" uid="uid://di5lyeq4t26uf" path="res://Assets/Graphics/foot1.png" id="6_s8qc7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_idj7w"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -37,14 +37,13 @@ metallic = 1.0
 metallic_texture = ExtResource("5_s8qc7")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kln2b"]
-size = Vector3(6.5, 4, 1.75)
+size = Vector3(6.5, 4, 3.75)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wk04j"]
-albedo_texture = ExtResource("3_x04ao")
-uv1_scale = Vector3(1, 20, 1)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_7gtkn"]
-material = SubResource("StandardMaterial3D_wk04j")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gif0i"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 1)
+proximity_fade_enabled = true
+proximity_fade_distance = 2.0
 
 [node name="Overworld Scene" type="Node3D"]
 script = ExtResource("1_vsp5g")
@@ -121,23 +120,79 @@ radius = 3.0
 height = 5.86875
 
 [node name="Enterance Trigger" type="Area3D" parent="Cave"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.75)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18.35)
+monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cave/Enterance Trigger"]
-transform = Transform3D(0.9998157, -0.019197444, 0, 0.019197444, 0.9998157, 0, 0, 0, 1, -0.25, 1.5, -0.375)
+transform = Transform3D(0.9998157, -0.019197444, 0, 0.019197444, 0.9998157, 0, 0, 0, 1, -0.25, 1.5, -1.375)
 shape = SubResource("BoxShape3D_kln2b")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Cave"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.6, -0.375, 1.375, 16.4)
+size = Vector3(9.75, 3.75, 1)
+material = SubResource("StandardMaterial3D_gif0i")
 
 [node name="Cake Trail" type="Node3D" parent="."]
 transform = Transform3D(-0.29999998, 0, -5.2453663e-07, 0, 0.5, 0, 2.6226832e-08, 0, -5.9999995, -0.25, 0.075, 12.974999)
 
-[node name="20" type="MeshInstance3D" parent="Cake Trail"]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, -8.881784e-16, 0, 1.5, 1.7881393e-06, 0, -1)
-mesh = SubResource("PlaneMesh_7gtkn")
-skeleton = NodePath("../Cake Trail Building Blocks")
+[node name="Sprite3D2" type="Sprite3D" parent="Cake Trail"]
+transform = Transform3D(0.2, 0, 3.8213654e-15, -7.642742e-16, 4.3711387e-10, 1, 0, -0.010000001, 4.3711392e-08, 1.6666615, 0, 2.916667)
+texture = ExtResource("6_s8qc7")
 
-[node name="21" type="MeshInstance3D" parent="Cake Trail"]
-transform = Transform3D(1.4999973, -0.002876974, 0.00012383019, 0.0028769763, 1.4999973, -2.9676914e-05, -0.00012377305, 2.9914363e-05, 1.5, -0.06493753, 0.018836975, 1.9887962)
-mesh = SubResource("PlaneMesh_7gtkn")
-skeleton = NodePath("../Cake Trail Building Blocks")
+[node name="Sprite3D3" type="Sprite3D" parent="Cake Trail"]
+transform = Transform3D(0.2, 1.7763568e-15, 3.8213586e-15, -7.642742e-16, 4.3711387e-10, 1, 0, -0.010000001, 4.3711395e-08, -0.8333384, 0, 2.7500002)
+texture = ExtResource("6_s8qc7")
+
+[node name="Sprite3D4" type="Sprite3D" parent="Cake Trail"]
+transform = Transform3D(0.2, 1.7763568e-15, 3.8213586e-15, -7.642742e-16, 4.3711387e-10, 1, 0, -0.010000001, 4.3711395e-08, 1.6666622, 0, 2.5833335)
+texture = ExtResource("6_s8qc7")
+
+[node name="Sprite3D5" type="Sprite3D" parent="Cake Trail"]
+transform = Transform3D(0.2, 1.7763568e-15, 3.8213586e-15, -7.642742e-16, 4.3711387e-10, 1, 0, -0.010000001, 4.3711395e-08, -4.172325e-06, 0, 2.416667)
+texture = ExtResource("6_s8qc7")
+
+[node name="Sprite3D6" type="Sprite3D" parent="Cake Trail"]
+transform = Transform3D(0.2, 1.7763568e-15, 3.8213586e-15, -7.642742e-16, 4.3711387e-10, 1, 0, -0.010000001, 4.3711395e-08, 0.8333295, 0, 2.2500005)
+texture = ExtResource("6_s8qc7")
+
+[node name="Sprite3D7" type="Sprite3D" parent="Cake Trail"]
+transform = Transform3D(0.2, 1.7763568e-15, 3.8213586e-15, -7.642742e-16, 4.3711387e-10, 1, 0, -0.010000001, 4.3711395e-08, -0.83333683, 0, 2.0000005)
+texture = ExtResource("6_s8qc7")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Cake Trail"]
+transform = Transform3D(0.2, 1.7763568e-15, 3.8213586e-15, -7.642742e-16, 4.3711387e-10, 1, 0, -0.010000001, 4.3711395e-08, 0.83333033, 0, 1.7500005)
+texture = ExtResource("6_s8qc7")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Cake Trail"]
+transform = Transform3D(0.2, 1.7763568e-15, 3.8213586e-15, -7.642742e-16, 4.3711387e-10, 1, 0, -0.010000001, 4.3711395e-08, -0.8333359, 0, 1.4583337)
+texture = ExtResource("6_s8qc7")
+
+[node name="Sprite3D10" type="Sprite3D" parent="Cake Trail"]
+transform = Transform3D(0.2, 1.7763568e-15, 3.8213586e-15, -7.642742e-16, 4.3711387e-10, 1, 0, -0.010000001, 4.3711395e-08, 0.83333117, 0, 1.2916671)
+texture = ExtResource("6_s8qc7")
+
+[node name="Sprite3D11" type="Sprite3D" parent="Cake Trail"]
+transform = Transform3D(0.2, 1.7763568e-15, 3.8213586e-15, -7.642742e-16, 4.3711387e-10, 1, 0, -0.010000001, 4.3711395e-08, -1.7881393e-06, 0, 1.0416671)
+texture = ExtResource("6_s8qc7")
+
+[node name="Sprite3D12" type="Sprite3D" parent="Cake Trail"]
+transform = Transform3D(0.2, 1.7763568e-15, 3.8213586e-15, -7.642742e-16, 4.3711387e-10, 1, 0, -0.010000001, 4.3711395e-08, 1.6666653, 0, 0.75000036)
+texture = ExtResource("6_s8qc7")
+
+[node name="Sprite3D13" type="Sprite3D" parent="Cake Trail"]
+transform = Transform3D(0.2, 1.7763568e-15, 3.8213586e-15, -7.642742e-16, 4.3711387e-10, 1, 0, -0.010000001, 4.3711395e-08, -1.2516975e-06, 0, 0.62500036)
+texture = ExtResource("6_s8qc7")
+
+[node name="Sprite3D14" type="Sprite3D" parent="Cake Trail"]
+transform = Transform3D(0.2, 1.7763568e-15, 3.8213586e-15, -7.642742e-16, 4.3711387e-10, 1, 0, -0.010000001, 4.3711395e-08, 2.4999993, 0, 0.37500036)
+texture = ExtResource("6_s8qc7")
+
+[node name="Sprite3D15" type="Sprite3D" parent="Cake Trail"]
+transform = Transform3D(0.2, 1.7763568e-15, 3.8213586e-15, -7.642742e-16, 4.3711387e-10, 1, 0, -0.010000001, 4.3711395e-08, 0.83333284, 0, 0.16666698)
+texture = ExtResource("6_s8qc7")
+
+[node name="Sprite3D16" type="Sprite3D" parent="Cake Trail"]
+transform = Transform3D(0.2, 1.7763568e-15, 3.8213586e-15, -7.642742e-16, 4.3711387e-10, 1, 0, -0.010000001, 4.3711395e-08, 3.3333342, 0, -0.08333278)
+texture = ExtResource("6_s8qc7")
 
 [connection signal="body_entered" from="Cave/Enterance Trigger" to="." method="_on_enterance_trigger_body_entered"]
