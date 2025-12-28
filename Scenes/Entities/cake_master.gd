@@ -14,7 +14,7 @@ class_name CakeMaster
 @onready var cam: Camera3D = head.get_child(0)
 @onready var ferret: Node3D = %ferret
 @onready var anim: AnimationPlayer = %ferret.get_child(1)
-@onready var pie: RigidBody3D = %Pie
+@onready var pie: Pie = %Pie
 
 var move_speed : float = 0
 var mouse_captured : bool = false
@@ -94,12 +94,6 @@ func release_mouse():
 	mouse_captured = false
 
 func throw_pie() -> void:
-	var clone : RigidBody3D = pie.duplicate()
-	get_tree().current_scene.add_child(clone)
-	clone.global_position = pie.global_position
-	clone.set_collision_mask_value(1, true) # pie will scan for walls
-	clone.set_collision_mask_value(2, true) # pie will scan for enemies
-	
-	# Calc throw direction
 	var forward_dir := -cam.get_global_transform().basis.z
-	clone.apply_central_impulse(Vector3.ONE * THROW_FORCE * forward_dir)
+	forward_dir.y += .5
+	pie.throw(forward_dir, THROW_FORCE)

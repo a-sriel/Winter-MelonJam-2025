@@ -2,16 +2,19 @@
 
 [ext_resource type="PackedScene" uid="uid://qoaxbwrr1jk1" path="res://Assets/Characters/ferret.fbx" id="1_al6m7"]
 [ext_resource type="Script" uid="uid://3slsttieqbc5" path="res://Scenes/Entities/cake_master.gd" id="1_fadgh"]
+[ext_resource type="PackedScene" uid="uid://7xxo58sbwhuo" path="res://Scenes/Pie/Pie.tscn" id="3_7aqde"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c77oj"]
 radius = 0.25
 height = 1.625
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_fadgh"]
-radius = 0.125
-
 [node name="Cake Master" type="CharacterBody3D"]
 script = ExtResource("1_fadgh")
+LOOK_SPEED = null
+BASE_SPEED = null
+SPRINT_SPEED = null
+JUMP_SPEED = null
+THROW_FORCE = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0, 0.445, 0.025)
@@ -48,16 +51,7 @@ fov = 90.0
 [node name="Hand" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.5, -0.275)
 
-[node name="Pie" type="RigidBody3D" parent="Hand"]
+[node name="Pie" parent="Hand" instance=ExtResource("3_7aqde")]
 unique_name_in_owner = true
-collision_layer = 0
-collision_mask = 0
-freeze = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hand/Pie"]
-shape = SubResource("SphereShape3D_fadgh")
-
-[node name="CSGSphere3D" type="CSGSphere3D" parent="Hand/Pie"]
-radius = 0.125
 
 [editable path="ferret"]
