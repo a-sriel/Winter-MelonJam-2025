@@ -244,9 +244,14 @@ use_collision = true
 size = Vector3(0.6845703, 2.4071045, 1.8299999)
 
 [node name="CSGBox3D21" type="CSGBox3D" parent="Inner Walls/CSGCombiner3D3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.912064, 0.0047664642, -4.5426555)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.912064, 0.0047664642, -5.662656)
 use_collision = true
-size = Vector3(0.6845703, 2.4071045, 4.2000003)
+size = Vector3(0.6845703, 2.4071045, 1.9599999)
+
+[node name="CSGBox3D29" type="CSGBox3D" parent="Inner Walls/CSGCombiner3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.912064, 0.0047664642, -3.0776563)
+use_collision = true
+size = Vector3(0.6845703, 2.4071045, 1.27)
 
 [node name="CSGBox3D25" type="CSGBox3D" parent="Inner Walls/CSGCombiner3D3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.912064, 0.0047664642, 1.4035132)
@@ -259,9 +264,9 @@ use_collision = true
 size = Vector3(0.6845703, 2.4071045, 3.1)
 
 [node name="CSGBox3D19" type="CSGBox3D" parent="Inner Walls/CSGCombiner3D3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.912064, 0.0047664642, -3.042656)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.912064, 0.0047664642, -3.0576568)
 use_collision = true
-size = Vector3(0.6845703, 2.4071045, 1.2)
+size = Vector3(0.6845703, 2.4071045, 1.23)
 
 [node name="CSGBox3D22" type="CSGBox3D" parent="Inner Walls/CSGCombiner3D3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.912064, 0.0047664642, -0.9678229)
@@ -274,9 +279,9 @@ use_collision = true
 size = Vector3(0.6845703, 2.4071045, 1.87)
 
 [node name="CSGBox3D20" type="CSGBox3D" parent="Inner Walls/CSGCombiner3D3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.912064, 0.0047664642, -5.1296053)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.912064, 0.0047664642, -5.1996055)
 use_collision = true
-size = Vector3(0.6845703, 2.4071045, 1.18)
+size = Vector3(0.6845703, 2.4071045, 1.04)
 
 [node name="CSGBox3D18" type="CSGBox3D" parent="Inner Walls/CSGCombiner3D3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.812063, 0.0047664642, -3.0926552)
@@ -475,9 +480,14 @@ use_collision = true
 size = Vector3(0.6845703, 2.4071045, 3.84)
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Inner Walls/CSGCombiner3D7"]
-transform = Transform3D(1, 0, -2.3590019e-12, 0, 1, 0, 0, 0, 1, -3.0879364, 0.0047664642, -6.2696266)
+transform = Transform3D(1, 0, -2.3590019e-12, 0, 1, 0, 0, 0, 1, -3.0879364, 0.0047664642, -4.769628)
 use_collision = true
-size = Vector3(0.6845703, 2.4071045, 4.24)
+size = Vector3(0.6845703, 2.4071045, 1.24)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Inner Walls/CSGCombiner3D7"]
+transform = Transform3D(1, 0, -2.3590019e-12, 0, 1, 0, 0, 0, 1, -3.0879364, 0.0047664642, -7.439627)
+use_collision = true
+size = Vector3(0.6845703, 2.4071045, 1.9)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Inner Walls/CSGCombiner3D7"]
 transform = Transform3D(1, 0, -2.3590019e-12, 0, 1, 0, 0, 0, 1, -3.1879358, 0.0047664642, 3.8942373)
@@ -523,15 +533,20 @@ transform = Transform3D(1, 0, -8.157031e-12, 0, 1, 0, 0, 0, 1, 15.199999, 0, -3.
 use_collision = true
 size = Vector3(0.6845703, 2.4071045, 1.28)
 
+[node name="CSGBox3D9" type="CSGBox3D" parent="Inner Walls/CSGCombiner3D8"]
+transform = Transform3D(1, 0, -8.1712415e-12, 0, 1, 0, 0, 0, 1, 15.2, 0, -6.283616)
+use_collision = true
+size = Vector3(0.6845703, 2.4071045, 1.28)
+
 [node name="CSGBox3D7" type="CSGBox3D" parent="Inner Walls/CSGCombiner3D8"]
 transform = Transform3D(1, 0, -8.48388e-12, 0, 1, 0, 0, 0, 1, 15.199999, 0, -0.9742584)
 use_collision = true
 size = Vector3(0.6845703, 2.4071045, 2.1000001)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Inner Walls/CSGCombiner3D8"]
-transform = Transform3D(1, 0, -8.7538865e-12, 0, 1, 0, 0, 0, 1, 18.800016, 0, -2.4389963)
+transform = Transform3D(1, 0, -9.350742e-12, 0, 1, 0, 0, 0, 1, 18.800026, 0, -3.4089937)
 use_collision = true
-size = Vector3(0.6845703, 2.4071045, 5.1)
+size = Vector3(0.6845703, 2.4071045, 7.04)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Inner Walls/CSGCombiner3D8"]
 transform = Transform3D(1, 0, -2.2836844e-11, 0, 1, 0, 0, 0, 1, -3.0879369, 0.0047664642, -3.4345737)
