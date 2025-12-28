@@ -1,7 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://betfqgwta40em"]
+[gd_scene load_steps=16 format=3 uid="uid://betfqgwta40em"]
 
 [ext_resource type="Script" uid="uid://bxr68sl4epoum" path="res://Scenes/overworld_scene.gd" id="1_vsp5g"]
 [ext_resource type="PackedScene" uid="uid://drdpvnbqqh62w" path="res://Scenes/Entities/Cake Master.tscn" id="2_x04ao"]
+[ext_resource type="Texture2D" uid="uid://cptqo4sa5ohln" path="res://Assets/Graphics/grass.png" id="2_x80r2"]
+[ext_resource type="Texture2D" uid="uid://dnurccw1qyc8q" path="res://Assets/Graphics/banner.png" id="3_7gtkn"]
 [ext_resource type="Texture2D" uid="uid://cqqe0ugnie4us" path="res://icon.svg" id="3_x04ao"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_idj7w"]
@@ -16,6 +18,17 @@ background_mode = 2
 sky = SubResource("Sky_vsp5g")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oxmj4"]
+albedo_texture = ExtResource("2_x80r2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cmk5e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x80r2"]
+albedo_texture = ExtResource("3_7gtkn")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s8qc7"]
+albedo_texture = ExtResource("3_7gtkn")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kln2b"]
 size = Vector3(6.5, 4, 1.75)
@@ -39,9 +52,11 @@ shadow_enabled = true
 
 [node name="Floor" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0059404373, 0.019806147, 3.257699)
+material_override = SubResource("StandardMaterial3D_oxmj4")
 use_collision = true
 collision_mask = 0
 size = Vector3(25, 0.1, 31.5)
+material = SubResource("StandardMaterial3D_cmk5e")
 
 [node name="Player" parent="." instance=ExtResource("2_x04ao")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5, 0, -5.75)
@@ -61,7 +76,9 @@ size = Vector3(0.25, 1, 0.25)
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Bakery"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7249999, 1.525, -5.75)
+material_override = SubResource("StandardMaterial3D_x80r2")
 size = Vector3(1.75, 0.05, 2.75)
+material = SubResource("StandardMaterial3D_s8qc7")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Bakery"]
 transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 1.4749999, 0.75, -7)
