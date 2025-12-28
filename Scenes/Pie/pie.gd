@@ -2,8 +2,14 @@ extends RigidBody3D
 class_name Pie
 
 @onready var death_timer: Timer = $"Death Timer"
+@onready var cooldown_timer: Timer = %Cooldown
+
+var can_throw : bool = true
 
 func throw(dir:Vector3, force:float) -> void:
+	if not can_throw:
+		return
+	
 	var clone : RigidBody3D = self.duplicate()
 	get_tree().current_scene.add_child(clone)
 	
@@ -21,12 +27,16 @@ func throw(dir:Vector3, force:float) -> void:
 	clone.apply_torque_impulse(random_torque)
 	
 	clone.death_timer.start()
+	self.cooldown_timer.start()
 
 # Freeze on any collision
 func _on_body_entered(_body: Node) -> void:
 	self.freeze = true
 	set_deferred("set_contact_monitor", false)
 	self.max_contacts_reported = 0
+
+func _on_cooldown_timeout() -> void:
+	can_throw = true
 
 # Kill thrown pies but now pie in hand
 func _on_death_timer_timeout() -> void:
