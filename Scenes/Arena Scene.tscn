@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://desfra8sypdg2"]
+
+[ext_resource type="Script" uid="uid://b0ci1xuoj5w30" path="res://Scenes/cave_scene.gd" id="1_n8ae3"]
+[ext_resource type="PackedScene" uid="uid://drdpvnbqqh62w" path="res://Scenes/Entities/Cake Master.tscn" id="2_gs72q"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wk04j"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_kln2b"]
+sky_material = SubResource("ProceduralSkyMaterial_wk04j")
+
+[sub_resource type="Environment" id="Environment_6e8at"]
+background_mode = 2
+sky = SubResource("Sky_kln2b")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Cave Scene" type="Node3D"]
+script = ExtResource("1_n8ae3")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_6e8at")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.4539906, 0.89100647, 0, -0.89100647, -0.4539906, 0, 6.75, 0)
+visible = false
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("2_gs72q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16.7)
+
+[node name="Floor" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30000114, 0, 9.799999)
+use_collision = true
+collision_mask = 0
+size = Vector3(26.2, 0.1, 18.4)
+
+[node name="Ceiling" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30000114, 2.3500001, 9.799999)
+use_collision = true
+collision_mask = 0
+size = Vector3(26.2, 0.2, 18.4)
+
+[node name="Outer Walls" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Outer Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.875, 19.5)
+size = Vector3(70.5, 2.75, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Outer Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.875, 0.099998474)
+size = Vector3(70.5, 2.75, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Outer Walls"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.1, 0.875, -32.375)
+size = Vector3(106.75, 2.75, 1)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Outer Walls"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -12.2, 0.875, -32.375)
+size = Vector3(106.75, 2.75, 1)
+
+[node name="Final Door" type="CSGBox3D" parent="Outer Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.25, 0.70000005, -70.9)
+operation = 2
+size = Vector3(0.90000004, 2.4, 1)

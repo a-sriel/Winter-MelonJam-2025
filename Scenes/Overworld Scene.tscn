@@ -120,7 +120,7 @@ radius = 3.0
 height = 5.86875
 
 [node name="Enterance Trigger" type="Area3D" parent="Cave"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18.35)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18.125)
 monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cave/Enterance Trigger"]

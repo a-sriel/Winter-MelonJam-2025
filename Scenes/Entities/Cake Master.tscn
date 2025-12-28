@@ -38,13 +38,13 @@ bones/26/rotation = Quaternion(-0.7071044, 0.0016462388, 0.70710546, -0.00160885
 
 [node name="Head" type="Node3D" parent="."]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
 fov = 90.0
 
 [node name="Hand" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.5, -0.275)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.55, -0.275)
 
 [node name="Pie" parent="Hand" instance=ExtResource("3_7aqde")]
 unique_name_in_owner = true

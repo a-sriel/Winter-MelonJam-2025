@@ -1,5 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://scseolfu2h03"]
+[gd_scene load_steps=20 format=3 uid="uid://scseolfu2h03"]
 
+[ext_resource type="Script" uid="uid://b0ci1xuoj5w30" path="res://Scenes/cave_scene.gd" id="1_3cfdu"]
 [ext_resource type="PackedScene" uid="uid://drdpvnbqqh62w" path="res://Scenes/Entities/Cake Master.tscn" id="1_bkos3"]
 [ext_resource type="Texture2D" uid="uid://cqqe0ugnie4us" path="res://icon.svg" id="2_wk04j"]
 [ext_resource type="Texture2D" uid="uid://di5lyeq4t26uf" path="res://Assets/Graphics/foot1.png" id="3_6e8at"]
@@ -51,7 +52,17 @@ albedo_texture = ExtResource("2_wk04j")
 [sub_resource type="PlaneMesh" id="PlaneMesh_76d20"]
 material = SubResource("StandardMaterial3D_3v46d")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_py0mi"]
+size = Vector3(6.5, 4, 3.75)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h3cb0"]
+transparency = 1
+albedo_color = Color(0, 0, 0, 1)
+proximity_fade_enabled = true
+proximity_fade_distance = 0.5
+
 [node name="Cave Scene" type="Node3D"]
+script = ExtResource("1_3cfdu")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6e8at")
@@ -63,6 +74,18 @@ shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_bkos3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13)
+
+[node name="Floor" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.200001, 0, -32.25)
+use_collision = true
+collision_mask = 0
+size = Vector3(70.4, 0.1, 102.5)
+
+[node name="Ceiling" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2.25, -32.25)
+use_collision = true
+collision_mask = 0
+size = Vector3(68, 0.1, 102.5)
 
 [node name="Cake Trail" type="Node3D" parent="."]
 
@@ -109,17 +132,10 @@ size = Vector3(106.75, 2.75, 1)
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -24.5, 0.875, -32.375)
 size = Vector3(106.75, 2.75, 1)
 
-[node name="Floor" type="CSGBox3D" parent="Outer Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -32.25)
-use_collision = true
-collision_mask = 0
-size = Vector3(68, 0.1, 102.5)
-
-[node name="Ceiling" type="CSGBox3D" parent="Outer Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2.25, -32.25)
-use_collision = true
-collision_mask = 0
-size = Vector3(68, 0.1, 102.5)
+[node name="Final Door" type="CSGBox3D" parent="Outer Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.25, 0.70000005, -70.9)
+operation = 2
+size = Vector3(0.90000004, 2.4, 1)
 
 [node name="Inner Walls" type="CSGCombiner3D" parent="."]
 use_collision = true
@@ -1723,3 +1739,20 @@ texture = ExtResource("3_6e8at")
 transform = Transform3D(1.3038516e-08, 0.049999926, 4.3711275e-08, -7.0069255e-16, -2.1855693e-09, 0.99999994, -0.049999926, 1.3038516e-08, -8.881784e-15, 43.29999, 0.051, -71.05798)
 modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
 texture = ExtResource("3_6e8at")
+
+[node name="Boss Door" type="Node3D" parent="."]
+
+[node name="Enterance Trigger" type="Area3D" parent="Boss Door"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 44.6375, 0, -72.4375)
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boss Door/Enterance Trigger"]
+transform = Transform3D(0.9998157, -0.019197444, 0, 0.019197444, 0.9998157, 0, 0, 0, 1, -0.25, 1.5, -1.375)
+shape = SubResource("BoxShape3D_py0mi")
+
+[node name="Darkness" type="CSGBox3D" parent="Boss Door"]
+transform = Transform3D(-4.371139e-08, 0, -2.6, 0, 1, 0, 1, 0, -1.13649605e-07, 45.4875, 1.35, -72.8125)
+size = Vector3(9.75, 3.8, 1)
+material = SubResource("StandardMaterial3D_h3cb0")
+
+[connection signal="body_entered" from="Boss Door/Enterance Trigger" to="." method="_on_enterance_trigger_body_entered"]
