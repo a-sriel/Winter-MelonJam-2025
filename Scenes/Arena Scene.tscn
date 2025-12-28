@@ -1,7 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://desfra8sypdg2"]
+[gd_scene load_steps=14 format=3 uid="uid://desfra8sypdg2"]
 
 [ext_resource type="Script" uid="uid://b0ci1xuoj5w30" path="res://Scenes/cave_scene.gd" id="1_n8ae3"]
 [ext_resource type="PackedScene" uid="uid://drdpvnbqqh62w" path="res://Scenes/Entities/Cake Master.tscn" id="2_gs72q"]
+[ext_resource type="Texture2D" uid="uid://cptqo4sa5ohln" path="res://Assets/Graphics/grass.png" id="3_gs72q"]
+[ext_resource type="Texture2D" uid="uid://cb0xbyidjdmc4" path="res://Assets/Graphics/cave_wall1.png" id="4_6gcys"]
+[ext_resource type="PackedScene" uid="uid://6jnny6fm4281" path="res://Assets/Objects/Crystal_Green.fbx" id="5_3ke27"]
+[ext_resource type="PackedScene" uid="uid://su4aj4l8x1ai" path="res://Assets/Objects/Crystal_Blue.fbx" id="6_6gcys"]
+[ext_resource type="PackedScene" uid="uid://hd3212swtnsc" path="res://Assets/Objects/Shroom.fbx" id="7_3ke27"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wk04j"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -15,6 +20,15 @@ background_mode = 2
 sky = SubResource("Sky_kln2b")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_twcri"]
+albedo_texture = ExtResource("3_gs72q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6udvb"]
+albedo_texture = ExtResource("4_6gcys")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32763"]
+albedo_texture = ExtResource("4_6gcys")
 
 [node name="Cave Scene" type="Node3D"]
 script = ExtResource("1_n8ae3")
@@ -31,18 +45,21 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16.7)
 
 [node name="Floor" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30000114, 0, 9.799999)
+transform = Transform3D(0.99999934, -0.0010925424, 0.00025225768, 0.0010923217, 0.99999905, 0.00086113415, -0.00025321142, -0.00086085417, 0.9999996, -0.2937913, 0, 9.821365)
+material_override = SubResource("StandardMaterial3D_twcri")
 use_collision = true
 collision_mask = 0
 size = Vector3(26.2, 0.1, 18.4)
 
 [node name="Ceiling" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30000114, 2.3500001, 9.799999)
+material_override = SubResource("StandardMaterial3D_6udvb")
 use_collision = true
 collision_mask = 0
 size = Vector3(26.2, 0.2, 18.4)
 
 [node name="Outer Walls" type="CSGCombiner3D" parent="."]
+material_override = SubResource("StandardMaterial3D_32763")
 use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Outer Walls"]
@@ -65,3 +82,58 @@ size = Vector3(106.75, 2.75, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.25, 0.70000005, -70.9)
 operation = 2
 size = Vector3(0.90000004, 2.4, 1)
+
+[node name="Crystals" type="Node3D" parent="."]
+
+[node name="Crystal_Green" parent="Crystals" instance=ExtResource("5_3ke27")]
+transform = Transform3D(-0.112076014, 0, -0.9936997, 0, 1, 0, 0.9936997, 0, -0.112076014, -6.115077, 0.16813946, 17.553406)
+
+[node name="Crystal_Green3" parent="Crystals" instance=ExtResource("5_3ke27")]
+transform = Transform3D(0.7217362, 0, 0.69216835, 0, 1, 0, -0.69216835, 0, 0.7217362, -6.115077, 0.16813946, 15.776554)
+
+[node name="Crystal_Green2" parent="Crystals" instance=ExtResource("5_3ke27")]
+transform = Transform3D(-1.6420174, -0.31783262, -1.0967048, -0.26430207, 1.9745841, -0.17652759, 1.1108211, 0, -1.6631526, -6.902896, 0.16813946, 16.507097)
+
+[node name="Crystal_Green4" parent="Crystals" instance=ExtResource("5_3ke27")]
+transform = Transform3D(-0.4880424, 0, 0.8728199, 0, 1, 0, -0.8728199, 0, -0.4880424, 9.886514, 0.16813946, 13.259817)
+
+[node name="Crystal_Green5" parent="Crystals" instance=ExtResource("5_3ke27")]
+transform = Transform3D(-0.18311086, 0, -0.9830924, 0, 1, 0, 0.9830924, 0, -0.18311086, 10.922045, 0.16813946, 14.703728)
+
+[node name="Crystal_Green6" parent="Crystals" instance=ExtResource("5_3ke27")]
+transform = Transform3D(0.68696594, 0.258278, 1.8604758, -0.26430205, 1.9745841, -0.17652756, -1.8596299, -0.18522963, 0.7123678, 11.136492, 0.16813946, 13.650939)
+
+[node name="Crystal_Green7" parent="Crystals" instance=ExtResource("5_3ke27")]
+transform = Transform3D(-0.9494474, 0, -0.31392613, 0, 1, 0, 0.31392613, 0, -0.9494474, -9.17742, 0.16813946, 5.1047015)
+
+[node name="Crystal_Green8" parent="Crystals" instance=ExtResource("5_3ke27")]
+transform = Transform3D(0.93062854, 0, -0.36596543, 0, 1, 0, 0.36596543, 0, 0.93062854, -7.563537, 0.16813946, 4.3613405)
+
+[node name="Crystal_Green9" parent="Crystals" instance=ExtResource("5_3ke27")]
+transform = Transform3D(-1.695891, -0.13296805, 1.0517957, -0.26430205, 1.9745841, -0.17652757, -1.0266933, -0.2886816, -1.6919113, -8.556667, 0.16813946, 3.9514074)
+
+[node name="Crystal_Blue" parent="Crystals" instance=ExtResource("6_6gcys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.960556, 0.13800669, 9.120805)
+
+[node name="Crystal_Blue2" parent="Crystals" instance=ExtResource("6_6gcys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9342937, 0.13800669, 4.3110523)
+
+[node name="Crystal_Blue3" parent="Crystals" instance=ExtResource("6_6gcys")]
+transform = Transform3D(-1.6452302, 0, -2.5086286, 0, 3, 0, 2.5086286, 0, -1.6452302, -0.71999836, 0.13800669, 4.3110523)
+
+[node name="Crystal_Blue4" parent="Crystals" instance=ExtResource("6_6gcys")]
+transform = Transform3D(-2.3820348, 0, -1.8237075, 0, 3, 0, 1.8237075, 0, -2.3820348, -10.955032, 0.13800669, 10.431176)
+
+[node name="Crystal_Blue5" parent="Crystals" instance=ExtResource("6_6gcys")]
+transform = Transform3D(0.7216541, 0, -1.8652655, -0.4406273, 1.9433955, -0.17047466, 1.8124743, 0.47245532, 0.7012297, -5.153904, -0.0007866621, 10.431176)
+
+[node name="Shrooms" type="Node3D" parent="."]
+
+[node name="Shroom" parent="Shrooms" instance=ExtResource("7_3ke27")]
+transform = Transform3D(0.33903494, 0, -0.36749873, 0, 0.5, 0, 0.36749873, 0, 0.33903494, 9.241935, -0.17624308, 4.8826804)
+
+[node name="Shroom2" parent="Shrooms" instance=ExtResource("7_3ke27")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.406624, -0.17624308, 12.877533)
+
+[node name="Shroom3" parent="Shrooms" instance=ExtResource("7_3ke27")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 8.219376, -0.17624308, 16.345497)

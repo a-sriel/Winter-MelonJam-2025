@@ -1,11 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://betfqgwta40em"]
+[gd_scene load_steps=21 format=3 uid="uid://betfqgwta40em"]
 
 [ext_resource type="Script" uid="uid://bxr68sl4epoum" path="res://Scenes/overworld_scene.gd" id="1_vsp5g"]
 [ext_resource type="PackedScene" uid="uid://drdpvnbqqh62w" path="res://Scenes/Entities/Cake Master.tscn" id="2_x04ao"]
 [ext_resource type="Texture2D" uid="uid://cptqo4sa5ohln" path="res://Assets/Graphics/grass.png" id="2_x80r2"]
 [ext_resource type="Texture2D" uid="uid://dnurccw1qyc8q" path="res://Assets/Graphics/banner.png" id="3_7gtkn"]
+[ext_resource type="Texture2D" uid="uid://do0eqsdh2b02b" path="res://Assets/Graphics/bakery_sign.png" id="5_cmk5e"]
 [ext_resource type="Texture2D" uid="uid://cb0xbyidjdmc4" path="res://Assets/Graphics/cave_wall1.png" id="5_s8qc7"]
 [ext_resource type="Texture2D" uid="uid://di5lyeq4t26uf" path="res://Assets/Graphics/foot1.png" id="6_s8qc7"]
+[ext_resource type="PackedScene" uid="uid://hd3212swtnsc" path="res://Assets/Objects/Shroom.fbx" id="7_oxmj4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_idj7w"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -25,6 +27,9 @@ albedo_texture = ExtResource("2_x80r2")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cmk5e"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5tceu"]
+albedo_color = Color(0.9109406, 0.7220029, 0.36685184, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x80r2"]
 albedo_texture = ExtResource("3_7gtkn")
 
@@ -35,6 +40,9 @@ albedo_texture = ExtResource("3_7gtkn")
 albedo_texture = ExtResource("5_s8qc7")
 metallic = 1.0
 metallic_texture = ExtResource("5_s8qc7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1jeuq"]
+albedo_texture = ExtResource("5_s8qc7")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kln2b"]
 size = Vector3(6.5, 4, 3.75)
@@ -56,7 +64,7 @@ transform = Transform3D(1, 0, 0, 0, -0.4539906, 0.89100647, 0, -0.89100647, -0.4
 shadow_enabled = true
 
 [node name="Floor" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0059404373, 0.019806147, 3.257699)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0037640035, 0.013693333, 3.2562397)
 material_override = SubResource("StandardMaterial3D_oxmj4")
 use_collision = true
 collision_mask = 0
@@ -64,7 +72,7 @@ size = Vector3(25, 0.1, 31.5)
 material = SubResource("StandardMaterial3D_cmk5e")
 
 [node name="Player" parent="." instance=ExtResource("2_x04ao")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5, 0, -5.75)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.4978236, -0.006112814, -5.751459)
 
 [node name="Bakery" type="CSGCombiner3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
@@ -72,35 +80,47 @@ use_collision = true
 collision_mask = 0
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Bakery"]
-transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, -0.024999976, 0.75, -7)
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, -0.02717638, 0.5118207, -7.001459)
 size = Vector3(0.25, 1, 0.25)
+material = SubResource("StandardMaterial3D_5tceu")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="Bakery"]
-transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 1.4749999, 0.75, -4.5)
+transform = Transform3D(1, 0, 0, 0, 1.7272279, 0, 0, 0, 1, 1.4728234, 0.846244, -4.501459)
 size = Vector3(0.25, 1, 0.25)
+material = SubResource("StandardMaterial3D_5tceu")
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Bakery"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7249999, 1.525, -5.75)
+transform = Transform3D(0.9576468, -0.28794557, 0, 0.28794557, 0.9576468, 0, 0, 0, 1, 0.6379677, 1.498831, -5.75)
 material_override = SubResource("StandardMaterial3D_x80r2")
-size = Vector3(1.75, 0.05, 2.75)
+size = Vector3(2.064331, 0.05, 2.75)
 material = SubResource("StandardMaterial3D_s8qc7")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Bakery"]
-transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 1.4749999, 0.75, -7)
+transform = Transform3D(1, 0, 0, 0, 1.7272279, 0, 0, 0, 1, 1.4728234, 0.846244, -7.001459)
 size = Vector3(0.25, 1, 0.25)
+material = SubResource("StandardMaterial3D_5tceu")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Bakery"]
-transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, -0.024999976, 0.75, -4.5)
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, -0.02717638, 0.5118207, -4.501459)
 size = Vector3(0.25, 1, 0.25)
+material = SubResource("StandardMaterial3D_5tceu")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Bakery"]
-transform = Transform3D(2.255, 0, 0, 0, 2.255, 0, 0, 0, 2.255, -0.014750004, -0.2255, -5.75)
+transform = Transform3D(2.255, 0, 0, 0, 2.255, 0, 0, 0, 2.255, -0.05008757, -0.23161276, -5.757044)
 size = Vector3(0.125, 0.8, 1)
+material = SubResource("StandardMaterial3D_5tceu")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="Bakery"]
 transform = Transform3D(1.5945256, 1.5945258, 0, -1.5945258, 1.5945256, 0, 0, 0, 2.2550004, -0.58975005, 0.124500036, -5.75)
 operation = 2
 size = Vector3(0.125, 0.8, 1)
+material = SubResource("StandardMaterial3D_5tceu")
+
+[node name="Sign" type="Node3D" parent="Bakery"]
+
+[node name="Paint" type="Sprite3D" parent="Bakery/Sign"]
+transform = Transform3D(-2.5601872e-09, 0, -0.1, 0, 0.060785353, 0, 0.058570255, 0, -4.371139e-09, -0.19196618, 0.29613423, -5.704613)
+texture = ExtResource("5_cmk5e")
 
 [node name="Cave" type="Node3D" parent="."]
 
@@ -118,6 +138,7 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 8
 operation = 2
 radius = 3.0
 height = 5.86875
+material = SubResource("StandardMaterial3D_1jeuq")
 
 [node name="Enterance Trigger" type="Area3D" parent="Cave"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18.125)
@@ -194,5 +215,43 @@ texture = ExtResource("6_s8qc7")
 [node name="Sprite3D16" type="Sprite3D" parent="Cake Trail"]
 transform = Transform3D(0.2, 1.7763568e-15, 3.8213586e-15, -7.642742e-16, 4.3711387e-10, 1, 0, -0.010000001, 4.3711395e-08, 3.3333342, 0, -0.08333278)
 texture = ExtResource("6_s8qc7")
+
+[node name="Shrooms" type="Node3D" parent="."]
+
+[node name="Shroom" parent="Shrooms" instance=ExtResource("7_oxmj4")]
+transform = Transform3D(0.07501814, 0, 0.12989333, 0, 0.14999999, 0, -0.12989333, 0, 0.07501814, 2.8317628, -0.0062179267, -9.73727)
+
+[node name="Shroom2" parent="Shrooms" instance=ExtResource("7_oxmj4")]
+transform = Transform3D(-0.039654173, 0, 0.14466357, 0, 0.15, 0, -0.14466357, 0, -0.039654173, 2.1267548, -0.0062179267, -9.028201)
+
+[node name="Shroom3" parent="Shrooms" instance=ExtResource("7_oxmj4")]
+transform = Transform3D(0.14874056, 0, -0.019397229, 0, 0.15, 0, 0.019397229, 0, 0.14874056, 8.607744, -0.0062179267, 4.2454453)
+
+[node name="Shroom4" parent="Shrooms" instance=ExtResource("7_oxmj4")]
+transform = Transform3D(0.11835138, 0, 0.09215723, 0, 0.14999999, 0, -0.09215723, 0, 0.11835138, 6.490247, -0.0062179267, 3.3009672)
+
+[node name="Shroom5" parent="Shrooms" instance=ExtResource("7_oxmj4")]
+transform = Transform3D(-0.016941454, 0, 0.14904025, 0, 0.15, 0, -0.14904025, 0, -0.016941454, -9.192863, -0.0062179267, -2.3146555)
+
+[node name="Shroom6" parent="Shrooms" instance=ExtResource("7_oxmj4")]
+transform = Transform3D(-0.11791413, 0, 0.09271602, 0, 0.14999999, 0, -0.09271602, 0, -0.11791413, -8.133963, -0.0062179267, 1.2638633)
+
+[node name="Shroom7" parent="Shrooms" instance=ExtResource("7_oxmj4")]
+transform = Transform3D(-0.07432111, 0, -0.13029341, 0, 0.14999999, 0, 0.13029341, 0, -0.07432111, -5.2344418, -0.0062179267, 4.397662)
+
+[node name="Shroom8" parent="Shrooms" instance=ExtResource("7_oxmj4")]
+transform = Transform3D(-0.07432111, 0, -0.13029341, 0, 0.14999999, 0, 0.13029341, 0, -0.07432111, -9.3707, -0.0062179267, 2.7618122)
+
+[node name="Shroom9" parent="Shrooms" instance=ExtResource("7_oxmj4")]
+transform = Transform3D(-0.123868525, 0, -0.21715568, 0, 0.25, 0, 0.21715568, 0, -0.123868525, -6.4538517, -0.02684477, 9.21015)
+
+[node name="Shroom10" parent="Shrooms" instance=ExtResource("7_oxmj4")]
+transform = Transform3D(0.040947624, 0, -0.24662378, 0, 0.25, 0, 0.24662378, 0, 0.040947624, -4.5545115, -0.02684477, 2.5516644)
+
+[node name="Shroom11" parent="Shrooms" instance=ExtResource("7_oxmj4")]
+transform = Transform3D(0.040947624, 0, -0.24662378, 0, 0.25, 0, 0.24662378, 0, 0.040947624, 6.461452, -0.02684477, 1.5106564)
+
+[node name="Shroom12" parent="Shrooms" instance=ExtResource("7_oxmj4")]
+transform = Transform3D(0.057326656, 0, -0.3452733, 0, 0.35, 0, 0.3452733, 0, 0.057326656, -5.933499, -0.02684477, -6.857377)
 
 [connection signal="body_entered" from="Cave/Enterance Trigger" to="." method="_on_enterance_trigger_body_entered"]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://scseolfu2h03"]
+[gd_scene load_steps=25 format=3 uid="uid://scseolfu2h03"]
 
 [ext_resource type="Script" uid="uid://b0ci1xuoj5w30" path="res://Scenes/cave_scene.gd" id="1_3cfdu"]
 [ext_resource type="PackedScene" uid="uid://drdpvnbqqh62w" path="res://Scenes/Entities/Cake Master.tscn" id="1_bkos3"]
 [ext_resource type="Texture2D" uid="uid://cqqe0ugnie4us" path="res://icon.svg" id="2_wk04j"]
 [ext_resource type="Texture2D" uid="uid://di5lyeq4t26uf" path="res://Assets/Graphics/foot1.png" id="3_6e8at"]
+[ext_resource type="Texture2D" uid="uid://cb0xbyidjdmc4" path="res://Assets/Graphics/cave_wall1.png" id="3_py0mi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wk04j"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -17,6 +18,12 @@ background_mode = 2
 sky = SubResource("Sky_kln2b")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3o5c"]
+albedo_texture = ExtResource("3_py0mi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_76d20"]
+albedo_texture = ExtResource("3_py0mi")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wk04j"]
 albedo_texture = ExtResource("2_wk04j")
@@ -52,6 +59,12 @@ albedo_texture = ExtResource("2_wk04j")
 [sub_resource type="PlaneMesh" id="PlaneMesh_76d20"]
 material = SubResource("StandardMaterial3D_3v46d")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6r01"]
+albedo_texture = ExtResource("3_py0mi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5gab5"]
+albedo_texture = ExtResource("3_py0mi")
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_py0mi"]
 size = Vector3(6.5, 4, 3.75)
 
@@ -77,12 +90,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13)
 
 [node name="Floor" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.200001, 0, -32.25)
+material_override = SubResource("StandardMaterial3D_j3o5c")
 use_collision = true
 collision_mask = 0
 size = Vector3(70.4, 0.1, 102.5)
 
 [node name="Ceiling" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2.25, -32.25)
+material_override = SubResource("StandardMaterial3D_76d20")
 use_collision = true
 collision_mask = 0
 size = Vector3(68, 0.1, 102.5)
@@ -113,6 +128,7 @@ transform = Transform3D(0.3, 0, 0, 0, 0.25, 0, 0, 0, 0.3, -3, 0.075, 11.325)
 mesh = SubResource("PlaneMesh_76d20")
 
 [node name="Outer Walls" type="CSGCombiner3D" parent="."]
+material_override = SubResource("StandardMaterial3D_q6r01")
 use_collision = true
 metadata/_edit_lock_ = true
 
@@ -138,6 +154,7 @@ operation = 2
 size = Vector3(0.90000004, 2.4, 1)
 
 [node name="Inner Walls" type="CSGCombiner3D" parent="."]
+material_override = SubResource("StandardMaterial3D_5gab5")
 use_collision = true
 collision_mask = 0
 
