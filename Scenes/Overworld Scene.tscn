@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://betfqgwta40em"]
+[gd_scene load_steps=22 format=3 uid="uid://betfqgwta40em"]
 
 [ext_resource type="Script" uid="uid://bxr68sl4epoum" path="res://Scenes/overworld_scene.gd" id="1_vsp5g"]
 [ext_resource type="PackedScene" uid="uid://drdpvnbqqh62w" path="res://Scenes/Entities/Cake Master.tscn" id="2_x04ao"]
@@ -52,6 +52,10 @@ transparency = 1
 albedo_color = Color(0, 0, 0, 1)
 proximity_fade_enabled = true
 proximity_fade_distance = 2.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0d0em"]
+albedo_color = Color(0.39833045, 0.8662986, 0.61914444, 1)
+albedo_texture = ExtResource("2_x80r2")
 
 [node name="Overworld Scene" type="Node3D"]
 script = ExtResource("1_vsp5g")
@@ -129,8 +133,8 @@ use_collision = true
 collision_mask = 0
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Cave/Cave Enterance"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 15.625)
-size = Vector3(25, 5.5, 6.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7987671, 15.625)
+size = Vector3(25, 4.597534, 6.25)
 material = SubResource("StandardMaterial3D_x07gn")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="Cave/Cave Enterance"]
@@ -253,5 +257,103 @@ transform = Transform3D(0.040947624, 0, -0.24662378, 0, 0.25, 0, 0.24662378, 0, 
 
 [node name="Shroom12" parent="Shrooms" instance=ExtResource("7_oxmj4")]
 transform = Transform3D(0.057326656, 0, -0.3452733, 0, 0.35, 0, 0.3452733, 0, 0.057326656, -5.933499, -0.02684477, -6.857377)
+
+[node name="Terrain" type="Node3D" parent="."]
+
+[node name="Hill" type="CSGPolygon3D" parent="Terrain"]
+transform = Transform3D(1.3570511, 0.01116322, -0.94032353, -0.00078655675, 1.3267624, 0.17376946, 0.2860159, -0.049317252, 4.462003, 10.652149, -0.4494217, 0)
+material_override = SubResource("StandardMaterial3D_0d0em")
+polygon = PackedVector2Array(0, 0, -0.30401802, 0.36161917, 1.0794668, 0.87659144, 1.450099, 0.016648531)
+
+[node name="Hill2" type="CSGPolygon3D" parent="Terrain"]
+transform = Transform3D(1.2016549, 0.037957925, 2.2745275, 0.027930275, 1.3218108, -0.420327, -0.6918374, 0.11929241, 3.9336658, 12.01178, -0.70067805, -2.6735153)
+material_override = SubResource("StandardMaterial3D_0d0em")
+polygon = PackedVector2Array(1.0058393, -1.0089697, -0.42069244, -0.21931332, 1.0794668, 0.87659144, 2.8056135, 0.7403822)
+
+[node name="Hill3" type="CSGPolygon3D" parent="Terrain"]
+transform = Transform3D(1.2226603, 0.07075789, 2.09268, 0.028418506, 2.4640057, -0.38672203, -0.703931, 0.22237462, 3.6191707, 12.01178, -0.70067805, -7.3951216)
+material_override = SubResource("StandardMaterial3D_0d0em")
+polygon = PackedVector2Array(2.3864222, -0.6585743, -3.2640882, -0.67269653, 1.0794668, 0.87659144, 1.797576, 0.5727652)
+
+[node name="Hill4" type="CSGPolygon3D" parent="Terrain"]
+transform = Transform3D(1.2795944, -0.5388167, 0.41147292, 0.5736831, 1.2087181, 0.10165399, -0.15296935, 0.025851889, 3.82322, 10.837296, 0.016362451, 3.5189724)
+material_override = SubResource("StandardMaterial3D_0d0em")
+polygon = PackedVector2Array(1.2667027, -1.6983086, -0.8435154, 0.2934159, 1.7734804, 0.91434693, 2.3412714, -0.9027325)
+
+[node name="Hill5" type="CSGPolygon3D" parent="Terrain"]
+transform = Transform3D(-0.16758448, 0.46739268, -3.5697093, 0.84111816, 1.022773, 0.83736664, 1.1199596, -0.69819075, -1.1630347, 10.837296, 0.016362451, 3.5189724)
+material_override = SubResource("StandardMaterial3D_0d0em")
+polygon = PackedVector2Array(0.9849434, -2.8468037, -3.1611724, 1.2830888, 1.212601, 0.019566298, 3.4142408, -1.3688309)
+
+[node name="Hill6" type="CSGPolygon3D" parent="Terrain"]
+transform = Transform3D(0.28141266, 0.15956508, -3.9960017, 0.7870723, 0.9118408, 0.92856884, 1.1982648, -0.6364108, 0.32853743, 10.655548, 0.95271057, 6.081566)
+material_override = SubResource("StandardMaterial3D_0d0em")
+polygon = PackedVector2Array(3.8215237, -5.757983, -1.2369311, -1.1996982, 1.212601, 0.019566298, 3.4671369, -1.4814721)
+
+[node name="Terrain2" type="Node3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="Hill" type="CSGPolygon3D" parent="Terrain2"]
+transform = Transform3D(1.3570511, 0.01116322, -0.94032353, -0.00078655675, 1.3267624, 0.17376946, 0.2860159, -0.049317252, 4.462003, 10.652149, -0.4494217, 0)
+material_override = SubResource("StandardMaterial3D_0d0em")
+polygon = PackedVector2Array(0, 0, -0.30401802, 0.36161917, 1.0794668, 0.87659144, 1.450099, 0.016648531)
+
+[node name="Hill2" type="CSGPolygon3D" parent="Terrain2"]
+transform = Transform3D(1.2016549, 0.037957925, 2.2745275, 0.027930275, 1.3218108, -0.420327, -0.6918374, 0.11929241, 3.9336658, 12.01178, -0.70067805, -2.6735153)
+material_override = SubResource("StandardMaterial3D_0d0em")
+polygon = PackedVector2Array(1.0058393, -1.0089697, -0.42069244, -0.21931332, 1.0794668, 0.87659144, 2.8056135, 0.7403822)
+
+[node name="Hill3" type="CSGPolygon3D" parent="Terrain2"]
+transform = Transform3D(1.2226603, 0.07075789, 2.09268, 0.028418506, 2.4640057, -0.38672203, -0.703931, 0.22237462, 3.6191707, 12.01178, -0.70067805, -7.3951216)
+material_override = SubResource("StandardMaterial3D_0d0em")
+polygon = PackedVector2Array(2.3864222, -0.6585743, -3.2640882, -0.67269653, 1.0794668, 0.87659144, 1.797576, 0.5727652)
+
+[node name="Hill4" type="CSGPolygon3D" parent="Terrain2"]
+transform = Transform3D(1.2795944, -0.5388167, 0.41147292, 0.5736831, 1.2087181, 0.10165399, -0.15296935, 0.025851889, 3.82322, 10.837296, 0.016362451, 3.5189724)
+material_override = SubResource("StandardMaterial3D_0d0em")
+polygon = PackedVector2Array(1.2667027, -1.6983086, -0.8435154, 0.2934159, 1.7734804, 0.91434693, 2.3412714, -0.9027325)
+
+[node name="Hill5" type="CSGPolygon3D" parent="Terrain2"]
+transform = Transform3D(-0.16758448, 0.46739268, -3.5697093, 0.84111816, 1.022773, 0.83736664, 1.1199596, -0.69819075, -1.1630347, 10.837296, 0.016362451, 3.5189724)
+material_override = SubResource("StandardMaterial3D_0d0em")
+polygon = PackedVector2Array(0.9849434, -2.8468037, -3.1611724, 1.2830888, 1.212601, 0.019566298, 3.4142408, -1.3688309)
+
+[node name="Hill6" type="CSGPolygon3D" parent="Terrain2"]
+transform = Transform3D(0.28141266, 0.15956508, -3.9960017, 0.7870723, 0.9118408, 0.92856884, 1.1982648, -0.6364108, 0.32853743, 10.655548, 0.95271057, 6.081566)
+material_override = SubResource("StandardMaterial3D_0d0em")
+polygon = PackedVector2Array(3.8215237, -5.757983, -1.2369311, -1.1996982, 1.212601, 0.019566298, 3.4671369, -1.4814721)
+
+[node name="Terrain3" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="Hill" type="CSGPolygon3D" parent="Terrain3"]
+transform = Transform3D(1.3570511, 0.01116322, -0.94032353, -0.00078655675, 1.3267624, 0.17376946, 0.2860159, -0.049317252, 4.462003, 10.652149, -0.4494217, 0)
+material_override = SubResource("StandardMaterial3D_0d0em")
+polygon = PackedVector2Array(0, 0, -0.30401802, 0.36161917, 1.0794668, 0.87659144, 1.450099, 0.016648531)
+
+[node name="Hill2" type="CSGPolygon3D" parent="Terrain3"]
+transform = Transform3D(1.2016549, 0.037957925, 2.2745275, 0.027930275, 1.3218108, -0.420327, -0.6918374, 0.11929241, 3.9336658, 12.01178, -0.70067805, -2.6735153)
+material_override = SubResource("StandardMaterial3D_0d0em")
+polygon = PackedVector2Array(1.0058393, -1.0089697, -0.42069244, -0.21931332, 1.0794668, 0.87659144, 2.8056135, 0.7403822)
+
+[node name="Hill3" type="CSGPolygon3D" parent="Terrain3"]
+transform = Transform3D(0.84736216, 0.07501981, 3.4323127, 0.019695386, 2.6124187, -0.63428277, -0.4878579, 0.2357688, 5.9359894, 12.01178, -0.70067805, -7.3951216)
+material_override = SubResource("StandardMaterial3D_0d0em")
+polygon = PackedVector2Array(2.3864222, -0.6585743, -3.2640882, -0.67269653, 1.0794668, 0.87659144, 4.47153, -0.15881926)
+
+[node name="Hill4" type="CSGPolygon3D" parent="Terrain3"]
+transform = Transform3D(1.2795944, -0.5388167, 0.41147292, 0.5736831, 1.2087181, 0.10165399, -0.15296935, 0.025851889, 3.82322, 10.837296, 0.016362451, 3.5189724)
+material_override = SubResource("StandardMaterial3D_0d0em")
+polygon = PackedVector2Array(1.2667027, -1.6983086, -0.8435154, 0.2934159, 1.7734804, 0.91434693, 2.3412714, -0.9027325)
+
+[node name="Hill5" type="CSGPolygon3D" parent="Terrain3"]
+transform = Transform3D(-0.16758448, 0.46739268, -3.5697093, 0.84111816, 1.022773, 0.83736664, 1.1199596, -0.69819075, -1.1630347, 10.837296, 0.016362451, 3.5189724)
+material_override = SubResource("StandardMaterial3D_0d0em")
+polygon = PackedVector2Array(0.9849434, -2.8468037, -3.1611724, 1.2830888, 1.212601, 0.019566298, 3.4142408, -1.3688309)
+
+[node name="Hill6" type="CSGPolygon3D" parent="Terrain3"]
+transform = Transform3D(0.28141266, 0.15956508, -3.9960017, 0.7870723, 0.9118408, 0.92856884, 1.1982648, -0.6364108, 0.32853743, 10.655548, 0.95271057, 6.081566)
+material_override = SubResource("StandardMaterial3D_0d0em")
+polygon = PackedVector2Array(3.8215237, -5.757983, -1.2369311, -1.1996982, 1.212601, 0.019566298, 3.4671369, -1.4814721)
 
 [connection signal="body_entered" from="Cave/Enterance Trigger" to="." method="_on_enterance_trigger_body_entered"]
