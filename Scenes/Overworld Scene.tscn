@@ -458,6 +458,36 @@ volume_db = 0.5
 pitch_scale = 1.1
 autoplay = true
 
+[node name="BoundingBox" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="BoundingBox"]
+transform = Transform3D(1, 0, 0, 0, 15.710169, 0, 0, 0, 24.607435, -11.755325, 5.158972, 2.159196)
+transparency = 1.0
+cast_shadow = 0
+use_collision = true
+size = Vector3(1, 1, 1.3800201)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="BoundingBox"]
+transform = Transform3D(1, 0, 0, 0, 15.710169, 0, 0, 0, 24.607435, 12.079184, 5.158972, 2.159196)
+transparency = 1.0
+cast_shadow = 0
+use_collision = true
+size = Vector3(1, 1, 1.3800201)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="BoundingBox"]
+transform = Transform3D(-4.371139e-08, 0, 24.607435, 0, 15.710169, 0, -1, 0, -1.0756252e-06, 0.43173262, 5.158972, -12.03628)
+transparency = 1.0
+cast_shadow = 0
+use_collision = true
+size = Vector3(1, 1, 1.2170582)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="BoundingBox"]
+transform = Transform3D(-4.371139e-08, 0, 24.607435, 0, 15.710169, 0, -1, 0, -1.0756252e-06, 0.43173262, 8.608553, 17.6653)
+transparency = 1.0
+cast_shadow = 0
+use_collision = true
+size = Vector3(1, 0.5918236, 1.2170582)
+
 [connection signal="body_entered" from="Cave/Enterance Trigger" to="." method="_on_enterance_trigger_body_entered"]
 [connection signal="pressed" from="Pause_Menu/ColorRect/Button_manager/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="Pause_Menu/ColorRect/Button_manager/Menu" to="." method="_on_menu_pressed"]
