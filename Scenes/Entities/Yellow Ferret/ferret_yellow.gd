@@ -3,6 +3,7 @@ class_name YellowFerret
 
 @export var mask_health : int = 3
 @export var WALK_SPEED : float = 4
+@export var SHOVE_FORCE : float = 5
 
 @onready var skeleton : Skeleton3D = $ferret_YellowMask/Armature/Skeleton3D
 @onready var head_bone_id : int = skeleton.find_bone("Head")
@@ -98,7 +99,7 @@ func _on_celebrate_zone_body_entered(body: Node3D) -> void:
 	if body is CakeMaster and not anim.current_animation == "Armature|Celebrate":
 		player_inside_celebration = true
 		anim.play("Armature|Celebrate")
-		body.take_damage()
+		body.take_shove_from(self.global_position, SHOVE_FORCE)
 		
 		await get_tree().create_timer(1.05).timeout
 		

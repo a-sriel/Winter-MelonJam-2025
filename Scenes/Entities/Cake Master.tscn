@@ -10,6 +10,7 @@ height = 1.625
 
 [node name="Cake Master" type="CharacterBody3D"]
 collision_layer = 8
+wall_min_slide_angle = 3.1415927
 script = ExtResource("1_fadgh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

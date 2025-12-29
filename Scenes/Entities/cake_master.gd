@@ -98,5 +98,7 @@ func throw_pie() -> void:
 	forward_dir.y += .5
 	pie.throw(forward_dir, THROW_FORCE)
 
-func take_damage() -> void:
-	print("took damage")
+func take_shove_from(from_pos:Vector3, force:float) -> void:
+	velocity = (self.global_position - from_pos) * force
+	velocity.y = 3
+	move_and_slide()
