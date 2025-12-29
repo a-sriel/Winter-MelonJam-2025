@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://betfqgwta40em"]
+[gd_scene load_steps=34 format=3 uid="uid://betfqgwta40em"]
 
 [ext_resource type="Script" uid="uid://bxr68sl4epoum" path="res://Scenes/overworld_scene.gd" id="1_vsp5g"]
 [ext_resource type="PackedScene" uid="uid://drdpvnbqqh62w" path="res://Scenes/Entities/Cake Master.tscn" id="2_x04ao"]
@@ -11,13 +11,13 @@
 [ext_resource type="PackedScene" uid="uid://hd3212swtnsc" path="res://Assets/Objects/Shroom.fbx" id="7_oxmj4"]
 [ext_resource type="PackedScene" uid="uid://qoaxbwrr1jk1" path="res://Assets/Characters/ferret.fbx" id="10_5tceu"]
 [ext_resource type="AudioStream" uid="uid://b2ywxb0fgni0f" path="res://Assets/Audio/Music/AMB_Morning_Forest_and_River_Rich_Loop.wav" id="10_gif0i"]
+[ext_resource type="PackedScene" uid="uid://22aydyqix5wg" path="res://Scenes/Entities/Ferrets/Bandito.tscn" id="12_0d0em"]
 [ext_resource type="PackedScene" uid="uid://ljwpwedp2edm" path="res://Assets/Objects/Cake.fbx" id="12_1jeuq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x07gn"]
 sky_top_color = Color(1.3957917e-06, 0.4381807, 0.4483828, 1)
 sky_horizon_color = Color(0.98432714, 0.43291813, 0, 1)
 sky_curve = 0.17230472
-ground_bottom_color = Color(0.167746, 0.3135673, 0.23870131, 1)
 ground_horizon_color = Color(0.13030818, 0.7488422, 0.7148934, 1)
 
 [sub_resource type="Sky" id="Sky_vsp5g"]
@@ -76,7 +76,7 @@ subpixel_positioning = 0
 
 [sub_resource type="Animation" id="Animation_x07gn"]
 resource_name = "IntroCutscene"
-length = 30.0
+length = 27.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -84,10 +84,10 @@ tracks/0/path = NodePath("AnimModels/ProtagFerret_Idle:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 6.5, 7, 8.75, 8.751),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(1.3246545, 0.008826137, -5.751459)]
+"values": [Vector3(1.3246545, 0.008826137, -5.751459), Vector3(1.3246545, 0.008826137, -5.751459), Vector3(2.121182, 0.008826137, -5.751459), Vector3(7.456479, -0.45605564, -5.751459), Vector3(7.456479, -1.0193996, -5.751459)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -96,10 +96,10 @@ tracks/1/path = NodePath("AnimModels/ProtagFerret_Idle:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 6.5, 7, 8.75, 8.751),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 1.5707964, 0)]
+"values": [Vector3(0, 1.5707964, 0), Vector3(0, 1.5707964, 0), Vector3(0, -1.5707964, 0), Vector3(0, -1.5707964, 0), Vector3(0, -1.5707964, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -108,10 +108,10 @@ tracks/2/path = NodePath("CinematicCamera:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 4, 6),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 4, 6, 8.75, 8.751, 10.990611, 14, 14.01, 17, 19.2, 19.21, 21, 21.01, 23, 23.01, 23.02, 28),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 1.9077368, 0), Vector3(-0.8226199, 0.85994625, -4.863682), Vector3(-1.5674073, 0.5278137, -5.4297376)]
+"values": [Vector3(0, 1.9077368, 0), Vector3(-0.8226199, 0.85994625, -4.863682), Vector3(-1.5674073, 0.5278137, -5.4297376), Vector3(-1.5674073, 0.5278137, -5.4297376), Vector3(1.8328402, 2.2051802, -6.463357), Vector3(1.6416409, 1.5920057, -7.2125363), Vector3(1.6416409, 1.5920057, -7.2125363), Vector3(0.25708544, 0.72596574, -1.803915), Vector3(3.2120492, 0.90143216, -10.483157), Vector3(3.2120492, 0.90143216, -10.483157), Vector3(2.8782687, 1.2047824, -5.5185575), Vector3(2.8782687, 1.2047824, -5.5185575), Vector3(1.5952694, 1.2781223, -7.170617), Vector3(1.5952694, 1.2781223, -7.170617), Vector3(1.5952694, 1.2781223, -7.170617), Vector3(4.595086, 0.76211965, -7.736697), Vector3(4.595086, 0.76211965, -7.736697)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -120,10 +120,10 @@ tracks/3/path = NodePath("CinematicCamera:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 4, 6),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 4, 6, 8.75, 8.751, 10.990611, 14, 14.01, 17, 17.01, 19.2, 19.21, 21, 21.01, 23, 23.01, 23.02, 28),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 1.3313546, 0), Vector3(0, -0.964312, 0), Vector3(0, -1.4802488, 0)]
+"values": [Vector3(0, 1.3313546, 0), Vector3(0, -0.964312, 0), Vector3(0, -1.4802488, 0), Vector3(0, -1.4802489, 0), Vector3(-1.5707964, 0, 0), Vector3(-1.4888017, -2.2645473, 0), Vector3(-1.4888017, -2.2645473, 0), Vector3(0, -3.1415925, 0), Vector3(0, -3.1415925, 0), Vector3(-0.045792907, 2.5739167, -0.06881846), Vector3(-0.045792907, 2.5739167, -0.06881846), Vector3(0, -1.5707964, 0), Vector3(0, -1.5707965, 0), Vector3(-1.5707964, -1.5707964, 0), Vector3(-1.5707964, 1.7249087, 0), Vector3(-1.5707964, 1.7249087, 0), Vector3(0, -1.5844972, 0), Vector3(0, -1.5844972, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -132,10 +132,70 @@ tracks/4/path = NodePath("CinematicCamera:fov")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(1, 4, 6.008333),
+"times": PackedFloat32Array(1, 4, 6.008333, 8.75, 8.751, 10.990611, 14, 14.01, 17, 17.01, 19.2, 19.21, 21, 21.01, 23, 23.01, 23.02, 28),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [75.0, 75.0, 20.0, 60.0, 65.0, 40.0, 40.0, 75.0, 30.0, 50.0, 50.0, 75.0, 75.0, 67.3735, 67.3735, 67.3735, 30.0, 30.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimModels/BanditFerret_Walk:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 14, 14.01, 17, 17.01),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.36327362, 0, 29.48233), Vector3(-0.36327362, 0, 29.48233), Vector3(-0.36327362, 0, 29.48233), Vector3(-0.36327362, 0, 6.1594105), Vector3(-0.36327362, -1.8037771, 6.1594105)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimModels/BanditFerret_Stealing:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 17, 17.01, 19, 19.01),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1.5959859, -6.3569055, -16.023056), Vector3(1.5959859, -6.3569055, -16.023056), Vector3(1.5959859, 0, -16.023056), Vector3(1.5959859, 0, -16.023056), Vector3(1.5959859, -1.7833023, -16.023056)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Cake:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 18.99, 19.01),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [75.0, 75.0, 20.0]
+"values": [Vector3(1.59553, 0.5138418, -7.186804), Vector3(1.59553, 0.5138418, -7.186804), Vector3(1.59553, -1.2071667, -7.186804)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimModels/ProtagFerret_Walk:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 19.5, 19.52, 21),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(14.572152, -0.8896351, -5.210888), Vector3(14.572152, -0.8896351, -5.210888), Vector3(14.436823, -0.11622435, -5.210888), Vector3(2.1500483, 0.0691942, -5.210888)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimModels/ProtagFerret_Surprise:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 23.01, 23.02, 28),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(14.551923, -1.5430703, 0), Vector3(14.551923, -1.5430703, 0), Vector3(14.551923, 0, 0), Vector3(14.551923, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_gif0i"]
@@ -200,9 +260,134 @@ tracks/4/keys = {
 "update": 0,
 "values": [75.0]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimModels/BanditFerret_Walk:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 29.48233)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimModels/BanditFerret_Stealing:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.5959859, 0, -16.023056)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Cake:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.59553, 0.5138418, -7.186804)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimModels/ProtagFerret_Walk:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(14.572152, -0.8896351, -5.210888)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimModels/ProtagFerret_Surprise:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(14.551923, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0d0em"]
+resource_name = "EndCutscene"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CinematicCamera:fov")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [20.0, 50.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CinematicCamera:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(2.240369, 3.4511685, -10.355219), Vector3(1.0234995, 1.1501124, -9.2427435)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CinematicCamera:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.7380115, 3.0695627, 0.048508942), Vector3(-0.21328588, 3.087089, 0.011547812)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimModels/ProtagFerret_Idle:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.99765384, 0.008826137, -7.5776477), Vector3(0.99765384, 0.008826137, -7.5776477)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimModels/ProtagFerret_Idle:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -0.85238403, 0), Vector3(0, -0.852384, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gif0i"]
 _data = {
+&"EndCutscene": SubResource("Animation_0d0em"),
 &"IntroCutscene": SubResource("Animation_x07gn"),
 &"RESET": SubResource("Animation_gif0i")
 }
@@ -725,12 +910,30 @@ transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09
 [node name="ferret" parent="AnimModels/ProtagFerret_Idle" instance=ExtResource("10_5tceu")]
 
 [node name="ProtagFerret_Walk" type="CharacterBody3D" parent="AnimModels"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.572152, -0.8896351, -5.210888)
+
+[node name="ferret" parent="AnimModels/ProtagFerret_Walk" instance=ExtResource("10_5tceu")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 
 [node name="ProtagFerret_Surprise" type="CharacterBody3D" parent="AnimModels"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.551923, 0, 0)
+
+[node name="ferret" parent="AnimModels/ProtagFerret_Surprise" instance=ExtResource("10_5tceu")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 7.576803, 0, -7.0585623)
 
 [node name="BanditFerret_Walk" type="CharacterBody3D" parent="AnimModels"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 29.48233)
+
+[node name="Bandito" parent="AnimModels/BanditFerret_Walk" instance=ExtResource("12_0d0em")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 8)
+script = null
 
 [node name="BanditFerret_Stealing" type="CharacterBody3D" parent="AnimModels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5959859, 0, -16.023056)
+
+[node name="Bandito" parent="AnimModels/BanditFerret_Stealing" instance=ExtResource("12_0d0em")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 8)
+script = null
 
 [node name="Cake" parent="." instance=ExtResource("12_1jeuq")]
 transform = Transform3D(-0.031987783, 0, 0.26809847, 0, 0.27000004, 0, -0.26809847, 0, -0.031987783, 1.59553, 0.5138418, -7.186804)

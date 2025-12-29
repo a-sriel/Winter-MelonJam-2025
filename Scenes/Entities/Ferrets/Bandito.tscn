@@ -1,11 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://u8fusg8tlq4e"]
+[gd_scene load_steps=10 format=3 uid="uid://22aydyqix5wg"]
 
 [ext_resource type="Script" uid="uid://cijovywqo4vb4" path="res://Scenes/Entities/Ferrets/bandito.gd" id="1_k7xoa"]
 [ext_resource type="PackedScene" uid="uid://bt23fe706ymcp" path="res://Assets/Characters/ferret_Bandito.fbx" id="2_44xr0"]
+[ext_resource type="Texture2D" uid="uid://bb656xbhvgdp3" path="res://Assets/Objects/WarPaint.png" id="3_ohynm"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3o06v"]
 radius = 0.25
 height = 1.625
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k7xoa"]
+albedo_texture = ExtResource("3_ohynm")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ohynm"]
 radius = 0.3
@@ -52,6 +56,9 @@ bones/27/rotation = Quaternion(-0.7071044, 0.0016462388, 0.70710546, -0.00160885
 bones/33/position = Vector3(-0.003652259, 0.016794838, 0.02291234)
 bones/35/position = Vector3(-0.010832394, -0.0022856537, 0.0132426545)
 bones/37/position = Vector3(-0.009534964, -0.04289753, 0.009959646)
+
+[node name="Mask" parent="ferret_Bandito/Armature/Skeleton3D" index="1"]
+material_override = SubResource("StandardMaterial3D_k7xoa")
 
 [node name="Head Hurtbox" type="StaticBody3D" parent="."]
 unique_name_in_owner = true
