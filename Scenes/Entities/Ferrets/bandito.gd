@@ -8,6 +8,7 @@ signal spawn_the_cake(position:Vector3)
 @export var MAX_MASK_HEALTH : int = 5
 @export var WALK_SPEED : float = 2
 @export var SHOVE_FORCE : float = 35
+@export var cake_visible : bool = false
 
 @onready var skeleton : Skeleton3D = $ferret_Bandito/Armature/Skeleton3D
 @onready var head_bone_id : int = skeleton.find_bone("Head")
@@ -32,6 +33,7 @@ var mask_health : int = MAX_MASK_HEALTH
 func _ready() -> void:
 	anim.play("Idle")
 	head_hurtbox.process_mode = Node.PROCESS_MODE_DISABLED
+	cake.visible = cake_visible
 
 func _process(_delta: float) -> void:
 	if not mask_fallen:
