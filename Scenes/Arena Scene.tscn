@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://su4aj4l8x1ai" path="res://Assets/Objects/Crystal_Blue.fbx" id="6_6gcys"]
 [ext_resource type="PackedScene" uid="uid://hd3212swtnsc" path="res://Assets/Objects/Shroom.fbx" id="7_3ke27"]
 [ext_resource type="AudioStream" uid="uid://t8ut8sfpogau" path="res://Assets/Audio/Music/MUSIC_Western_AcousticGuitars1_110BPM_Loop.wav" id="9_6udvb"]
-[ext_resource type="PackedScene" uid="uid://cfvls1g6ifaa2" path="res://Scenes/Pie/Pie_Refiller.tscn" id="10_32763"]
+[ext_resource type="PackedScene" path="res://Scenes/Pie/Pie_Refiller.tscn" id="10_32763"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wk04j"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
