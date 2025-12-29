@@ -97,3 +97,6 @@ func throw_pie() -> void:
 	var forward_dir := -cam.get_global_transform().basis.z
 	forward_dir.y += .5
 	pie.throw(forward_dir, THROW_FORCE)
+
+func take_damage() -> void:
+	print("took damage")

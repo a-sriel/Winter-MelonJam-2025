@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b0x346a5hwjru"]
+[gd_scene load_steps=10 format=3 uid="uid://b0x346a5hwjru"]
 
 [ext_resource type="PackedScene" uid="uid://bqm8ro5lcwff5" path="res://Assets/Characters/ferret_YellowMask.fbx" id="1_3o06v"]
 [ext_resource type="Script" uid="uid://drbpko2d57cva" path="res://Scenes/Entities/Yellow Ferret/ferret_yellow.gd" id="1_d5u3i"]
@@ -17,6 +17,10 @@ radius = 0.2
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_xmnmm"]
 radius = 5.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_3sybv"]
+height = 1.0
+radius = 0.2
 
 [node name="Ferret Yellow" type="CharacterBody3D"]
 collision_layer = 2
@@ -90,23 +94,36 @@ freeze = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Mask Hurtbox"]
 shape = SubResource("SphereShape3D_3sybv")
 
-[node name="Celebrate Zone" type="Area3D" parent="."]
+[node name="Chase Zone" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 collision_layer = 0
 collision_mask = 8
 monitorable = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Celebrate Zone"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Chase Zone"]
 shape = SubResource("SphereShape3D_xmnmm")
+
+[node name="Celebrate Zone" type="Area3D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Celebrate Zone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.2)
+shape = SubResource("CylinderShape3D_3sybv")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 unique_name_in_owner = true
 path_desired_distance = 0.25
 target_desired_distance = 0.25
+path_height_offset = 0.5
 debug_enabled = true
 debug_use_custom = true
 debug_path_custom_color = Color(0, 1, 0, 1)
 
+[connection signal="body_entered" from="Chase Zone" to="." method="_on_chase_zone_body_entered"]
 [connection signal="body_entered" from="Celebrate Zone" to="." method="_on_celebrate_zone_body_entered"]
+[connection signal="body_exited" from="Celebrate Zone" to="." method="_on_celebrate_zone_body_exited"]
 
 [editable path="ferret_YellowMask"]

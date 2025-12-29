@@ -14,9 +14,11 @@ class_name YellowFerret
 @onready var head_hurtbox: StaticBody3D = %"Head Hurtbox"
 @onready var mask_mesh: MeshInstance3D = $ferret_YellowMask/Armature/Skeleton3D/Mask
 @onready var navigation_agent: NavigationAgent3D = %NavigationAgent3D
+@onready var celebrate_zone: Area3D = %"Celebrate Zone"
 
 
 var mask_fallen : bool = false
+var player_inside_celebration : bool = false
 
 
 func _ready() -> void:
@@ -30,9 +32,11 @@ func _process(_delta: float) -> void:
 		mask_hurtbox.global_position = skeleton.to_global((mask_start_pos + mask_end_pos)/2)
 	head_hurtbox.global_position = skeleton.to_global(skeleton.get_bone_global_pose(head_bone_id).origin)
 	
+	if anim.current_animation == "Armature|Celebrate":
+		return
+	
 	if self.get_real_velocity():
 		anim.play("Armature|Walk")
-		print(get_real_velocity())
 	else:
 		anim.play("Idle")
 
@@ -86,6 +90,17 @@ func take_damage() -> void:
 		mask_fallen = true
 
 
-func _on_celebrate_zone_body_entered(body: Node3D) -> void:
+func _on_chase_zone_body_entered(body: Node3D) -> void:
 	if body is CakeMaster:
 		navigation_agent.set_target_position(body.global_position)
+
+func _on_celebrate_zone_body_entered(body: Node3D) -> void:
+	if body is CakeMaster and not anim.current_animation == "Armature|Celebrate":
+		player_inside_celebration = true
+		anim.play("Armature|Celebrate")
+		body.take_damage()
+		
+		await get_tree().create_timer(1.05).timeout
+		
+		if celebrate_zone.overlaps_body(body):
+			_on_celebrate_zone_body_entered(body)
