@@ -103,7 +103,7 @@ func release_mouse():
 
 func throw_pie() -> void:
 	var forward_dir := -cam.get_global_transform().basis.z
-	forward_dir.y += .5
+	forward_dir.y += .3
 	pie.throw(forward_dir, THROW_FORCE)
 
 func take_shove_from(dir:Vector3, force:float) -> void:

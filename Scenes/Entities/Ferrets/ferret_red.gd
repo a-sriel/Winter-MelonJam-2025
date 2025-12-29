@@ -2,7 +2,7 @@ extends CharacterBody3D
 class_name RedFerret
 
 @export var mask_health : int = 1
-@export var WALK_SPEED : float = 2
+@export var WALK_SPEED : float = randi_range(2, 4)
 @export var SHOVE_FORCE : float = 15
 
 @onready var skeleton : Skeleton3D = $ferret_RedMask/Armature/Skeleton3D
