@@ -17,7 +17,7 @@ transform = Transform3D(18, 0, 0, 0, -2.1457672e-06, 18, 0, -18, -2.1457672e-06,
 shape = SubResource("ConvexPolygonShape3D_7o8od")
 
 [node name="Death Timer" type="Timer" parent="."]
-wait_time = 15.0
+wait_time = 5.0
 one_shot = true
 
 [node name="Cooldown" type="Timer" parent="."]
