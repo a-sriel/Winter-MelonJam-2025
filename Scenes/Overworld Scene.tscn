@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://betfqgwta40em"]
+[gd_scene load_steps=27 format=3 uid="uid://betfqgwta40em"]
 
 [ext_resource type="Script" uid="uid://bxr68sl4epoum" path="res://Scenes/overworld_scene.gd" id="1_vsp5g"]
 [ext_resource type="PackedScene" uid="uid://drdpvnbqqh62w" path="res://Scenes/Entities/Cake Master.tscn" id="2_x04ao"]
@@ -8,18 +8,24 @@
 [ext_resource type="Texture2D" uid="uid://cb0xbyidjdmc4" path="res://Assets/Graphics/cave_wall1.png" id="5_s8qc7"]
 [ext_resource type="Texture2D" uid="uid://di5lyeq4t26uf" path="res://Assets/Graphics/foot1.png" id="6_s8qc7"]
 [ext_resource type="PackedScene" uid="uid://hd3212swtnsc" path="res://Assets/Objects/Shroom.fbx" id="7_oxmj4"]
+[ext_resource type="PackedScene" uid="uid://qoaxbwrr1jk1" path="res://Assets/Characters/ferret.fbx" id="10_5tceu"]
 [ext_resource type="AudioStream" uid="uid://b2ywxb0fgni0f" path="res://Assets/Audio/Music/AMB_Morning_Forest_and_River_Rich_Loop.wav" id="10_gif0i"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_idj7w"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x07gn"]
+sky_top_color = Color(1.3957917e-06, 0.4381807, 0.4483828, 1)
+sky_horizon_color = Color(0.98432714, 0.43291813, 0, 1)
+sky_curve = 0.17230472
+ground_bottom_color = Color(0.167746, 0.3135673, 0.23870131, 1)
+ground_horizon_color = Color(0.13030818, 0.7488422, 0.7148934, 1)
 
 [sub_resource type="Sky" id="Sky_vsp5g"]
-sky_material = SubResource("ProceduralSkyMaterial_idj7w")
+sky_material = SubResource("ProceduralSkyMaterial_x07gn")
 
 [sub_resource type="Environment" id="Environment_rgh2o"]
 background_mode = 2
+background_energy_multiplier = 2.55
 sky = SubResource("Sky_vsp5g")
+ambient_light_color = Color(1, 1, 1, 1)
 tonemap_mode = 2
 glow_enabled = true
 
@@ -60,6 +66,14 @@ albedo_texture = ExtResource("2_x80r2")
 
 [sub_resource type="SystemFont" id="SystemFont_x07gn"]
 subpixel_positioning = 0
+
+[sub_resource type="Animation" id="Animation_x07gn"]
+resource_name = "IntroCutscene"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gif0i"]
+_data = {
+&"IntroCutscene": SubResource("Animation_x07gn")
+}
 
 [node name="Overworld Scene" type="Node3D"]
 script = ExtResource("1_vsp5g")
@@ -486,7 +500,30 @@ cast_shadow = 0
 use_collision = true
 size = Vector3(1, 0.5918236, 1.2170582)
 
+[node name="CinematicCamera" type="Camera3D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_gif0i")
+}
+
+[node name="AnimModels" type="Node" parent="."]
+
+[node name="ProtagFerret_Idle" type="CharacterBody3D" parent="AnimModels"]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 1.3246545, 0.008826137, -5.751459)
+
+[node name="ferret" parent="AnimModels/ProtagFerret_Idle" instance=ExtResource("10_5tceu")]
+
+[node name="ProtagFerret_Walk" type="CharacterBody3D" parent="AnimModels"]
+
+[node name="ProtagFerret_Surprise" type="CharacterBody3D" parent="AnimModels"]
+
+[node name="BanditFerret_Walk" type="CharacterBody3D" parent="AnimModels"]
+
+[node name="BanditFerret_Stealing" type="CharacterBody3D" parent="AnimModels"]
+
 [connection signal="body_entered" from="Cave/Enterance Trigger" to="." method="_on_enterance_trigger_body_entered"]
 [connection signal="pressed" from="Pause_Menu/ColorRect/Button_manager/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="Pause_Menu/ColorRect/Button_manager/Menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="Pause_Menu/ColorRect/Button_manager/Close" to="." method="_on_close_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
