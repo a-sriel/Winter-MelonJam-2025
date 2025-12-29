@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dd2anasvify53"]
+[gd_scene load_steps=6 format=3 uid="uid://dd2anasvify53"]
 
 [ext_resource type="Script" uid="uid://cfaq21e0cami4" path="res://main_menu.gd" id="1_06t4h"]
 [ext_resource type="PackedScene" uid="uid://c0q01i2up20pf" path="res://fade_transition.tscn" id="2_7vrkn"]
 [ext_resource type="Texture2D" uid="uid://dqf3xaxultvws" path="res://Assets/Graphics/splash_screen.png" id="2_fu7sn"]
+[ext_resource type="AudioStream" uid="uid://cbnx1furufi14" path="res://Assets/Audio/SFX/Menu/AMB_Soundscape_Magical_Concentrate_Loop.wav" id="4_jix8l"]
 
 [sub_resource type="SystemFont" id="SystemFont_fu7sn"]
 
@@ -73,6 +74,12 @@ theme_override_fonts/font = SubResource("SystemFont_fu7sn")
 text = "Exit"
 flat = true
 alignment = 0
+
+[node name="BGM" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="BGM"]
+stream = ExtResource("4_jix8l")
+autoplay = true
 
 [connection signal="timeout" from="fade_transition/fade_timer" to="." method="_on_fade_timer_timeout"]
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]

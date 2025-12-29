@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://betfqgwta40em"]
+[gd_scene load_steps=25 format=3 uid="uid://betfqgwta40em"]
 
 [ext_resource type="Script" uid="uid://bxr68sl4epoum" path="res://Scenes/overworld_scene.gd" id="1_vsp5g"]
 [ext_resource type="PackedScene" uid="uid://drdpvnbqqh62w" path="res://Scenes/Entities/Cake Master.tscn" id="2_x04ao"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://di5lyeq4t26uf" path="res://Assets/Graphics/foot1.png" id="6_s8qc7"]
 [ext_resource type="PackedScene" uid="uid://hd3212swtnsc" path="res://Assets/Objects/Shroom.fbx" id="7_oxmj4"]
 [ext_resource type="Script" uid="uid://15364fdgcrpo" path="res://Scenes/pause_menu.gd" id="9_x07gn"]
+[ext_resource type="AudioStream" uid="uid://b2ywxb0fgni0f" path="res://Assets/Audio/Music/AMB_Morning_Forest_and_River_Rich_Loop.wav" id="10_gif0i"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_idj7w"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -59,6 +60,7 @@ albedo_color = Color(0.39833045, 0.8662986, 0.61914444, 1)
 albedo_texture = ExtResource("2_x80r2")
 
 [sub_resource type="SystemFont" id="SystemFont_x07gn"]
+subpixel_positioning = 0
 
 [node name="Overworld Scene" type="Node3D"]
 script = ExtResource("1_vsp5g")
@@ -388,7 +390,7 @@ offset_top = 299.0
 offset_right = 654.0
 offset_bottom = 339.0
 scale = Vector2(17.332542, 11.039999)
-color = Color(0.690611, 0.38704112, 0.36965868, 1)
+color = Color(0.37828982, 0.74889493, 0.67451066, 1)
 
 [node name="Button_manager" type="Control" parent="Pause_Menu/ColorRect"]
 anchors_preset = 0
@@ -447,6 +449,14 @@ text = "Exit
 "
 flat = true
 alignment = 0
+
+[node name="BGM" type="Node3D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="BGM"]
+stream = ExtResource("10_gif0i")
+volume_db = 0.5
+pitch_scale = 1.1
+autoplay = true
 
 [connection signal="body_entered" from="Cave/Enterance Trigger" to="." method="_on_enterance_trigger_body_entered"]
 [connection signal="pressed" from="Pause_Menu/ColorRect/Button_manager/Resume" to="." method="_on_resume_pressed"]
