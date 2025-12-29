@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://chyntdyd6owcq" path="res://Scenes/Entities/Ferrets/ferret_blue.gd" id="1_45k76"]
 [ext_resource type="PackedScene" uid="uid://bqm8ro5lcwff5" path="res://Assets/Characters/ferret_YellowMask.fbx" id="2_vdtj8"]
 [ext_resource type="Texture2D" uid="uid://cyatnw4ug5oj2" path="res://Assets/Objects/BluePaint.png" id="3_45k76"]
-[ext_resource type="PackedScene" uid="uid://b70d2vp0a2nqr" path="res://Scenes/Hurtbox.tscn" id="4_t24de"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3o06v"]
 radius = 0.25
@@ -11,6 +10,9 @@ height = 1.625
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6phc"]
 albedo_texture = ExtResource("3_45k76")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ihib1"]
+radius = 0.2
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_3sybv"]
 radius = 0.2
@@ -83,8 +85,13 @@ bones/35/rotation = Quaternion(0.8812496, 0.07393442, 0.46398693, -0.05146814)
 [node name="Mask" parent="ferret_RedMask/Armature/Skeleton3D" index="1"]
 material_override = SubResource("StandardMaterial3D_q6phc")
 
-[node name="Head Hurtbox" parent="." instance=ExtResource("4_t24de")]
+[node name="Head Hurtbox" type="StaticBody3D" parent="."]
 unique_name_in_owner = true
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Head Hurtbox"]
+shape = SubResource("SphereShape3D_ihib1")
 
 [node name="Mask Hurtbox" type="RigidBody3D" parent="."]
 unique_name_in_owner = true

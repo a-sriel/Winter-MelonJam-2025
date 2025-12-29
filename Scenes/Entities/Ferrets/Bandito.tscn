@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=3 uid="uid://u8fusg8tlq4e"]
+
+[ext_resource type="Script" uid="uid://cijovywqo4vb4" path="res://Scenes/Entities/Ferrets/bandito.gd" id="1_k7xoa"]
+[ext_resource type="PackedScene" uid="uid://bt23fe706ymcp" path="res://Assets/Characters/ferret_Bandito.fbx" id="2_44xr0"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3o06v"]
+radius = 0.25
+height = 1.625
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ohynm"]
+radius = 0.3
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3sybv"]
+radius = 0.3
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xmnmm"]
+radius = 20.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_3sybv"]
+height = 1.0
+radius = 0.3
+
+[node name="Bandito" type="CharacterBody3D"]
+collision_layer = 2
+script = ExtResource("1_k7xoa")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0, 0.445, 0.025)
+shape = SubResource("CapsuleShape3D_3o06v")
+
+[node name="ferret_Bandito" parent="." instance=ExtResource("2_44xr0")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+
+[node name="Head Hurtbox" type="StaticBody3D" parent="."]
+unique_name_in_owner = true
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Head Hurtbox"]
+shape = SubResource("SphereShape3D_ohynm")
+
+[node name="Mask Hurtbox" type="RigidBody3D" parent="."]
+unique_name_in_owner = true
+collision_layer = 4
+collision_mask = 9
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mask Hurtbox"]
+shape = SubResource("SphereShape3D_3sybv")
+
+[node name="Chase Zone" type="Area3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Chase Zone"]
+shape = SubResource("SphereShape3D_xmnmm")
+
+[node name="Celebrate Zone" type="Area3D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Celebrate Zone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.3)
+shape = SubResource("CylinderShape3D_3sybv")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+unique_name_in_owner = true
+path_desired_distance = 0.25
+target_desired_distance = 0.25
+path_height_offset = 0.5
+debug_enabled = true
+debug_use_custom = true
+debug_path_custom_color = Color(0, 1, 0, 1)
+
+[node name="Damage Phase Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="body_entered" from="Chase Zone" to="." method="_on_chase_zone_body_entered"]
+[connection signal="body_entered" from="Celebrate Zone" to="." method="_on_celebrate_zone_body_entered"]
+[connection signal="body_exited" from="Celebrate Zone" to="." method="_on_celebrate_zone_body_exited"]
+[connection signal="timeout" from="Damage Phase Timer" to="." method="_on_damage_phase_timer_timeout"]
