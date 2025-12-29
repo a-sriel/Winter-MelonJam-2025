@@ -1,3 +1,42 @@
-[gd_scene format=3 uid="uid://i1jlkvjuqqdj"]
+[gd_scene load_steps=4 format=3 uid="uid://i1jlkvjuqqdj"]
+
+[ext_resource type="Script" uid="uid://b265ftjv53if5" path="res://credits.gd" id="1_c1t8d"]
+[ext_resource type="Texture2D" uid="uid://cxltitln0lsku" path="res://Assets/Graphics/credits_screen.png" id="1_nm7lk"]
+
+[sub_resource type="SystemFont" id="SystemFont_c1t8d"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_c1t8d")
+
+[node name="CreditsScreen" type="Sprite2D" parent="."]
+position = Vector2(960, 543)
+texture = ExtResource("1_nm7lk")
+
+[node name="Credits" type="Button" parent="."]
+offset_left = 921.0
+offset_top = 253.0
+offset_right = 1152.0
+offset_bottom = 284.0
+scale = Vector2(4.143713, 3.8121922)
+text = "Music and SFX: SwishSwoosh"
+flat = true
+alignment = 0
+
+[node name="Return" type="Button" parent="."]
+top_level = true
+offset_left = 1590.0
+offset_top = 916.0
+offset_right = 1661.0
+offset_bottom = 947.0
+scale = Vector2(3.8234158, 3.4783568)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_color = Color(6.738305e-07, 0.5916015, 0.60168046, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_c1t8d")
+text = "Go Back
+"
+flat = true
+alignment = 0
+
+[connection signal="pressed" from="Return" to="." method="_on_return_pressed"]

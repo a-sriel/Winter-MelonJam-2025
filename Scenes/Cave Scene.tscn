@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://scseolfu2h03"]
+[gd_scene load_steps=15 format=3 uid="uid://scseolfu2h03"]
 
 [ext_resource type="Script" uid="uid://b0ci1xuoj5w30" path="res://Scenes/cave_scene.gd" id="1_3cfdu"]
 [ext_resource type="PackedScene" uid="uid://drdpvnbqqh62w" path="res://Scenes/Entities/Cake Master.tscn" id="1_bkos3"]
 [ext_resource type="Texture2D" uid="uid://di5lyeq4t26uf" path="res://Assets/Graphics/foot1.png" id="3_6e8at"]
 [ext_resource type="Texture2D" uid="uid://cb0xbyidjdmc4" path="res://Assets/Graphics/cave_wall1.png" id="3_py0mi"]
+[ext_resource type="PackedScene" uid="uid://dfjq6vfedjch3" path="res://Assets/Objects/Torch.fbx" id="5_py0mi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wk04j"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -23,6 +24,7 @@ albedo_texture = ExtResource("3_py0mi")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_76d20"]
 albedo_texture = ExtResource("3_py0mi")
+ao_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6r01"]
 albedo_texture = ExtResource("3_py0mi")
@@ -63,9 +65,9 @@ size = Vector3(70.4, 0.1, 102.5)
 metadata/_edit_lock_ = true
 
 [node name="Ceiling" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2.25, -32.25)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 13.471585, 0, 0, 0, 1, 10, 2.8502579, -32.25)
 material_override = SubResource("StandardMaterial3D_76d20")
+cast_shadow = 2
 use_collision = true
 collision_mask = 0
 size = Vector3(68, 0.1, 102.5)
@@ -2324,5 +2326,1071 @@ shape = SubResource("BoxShape3D_py0mi")
 transform = Transform3D(-4.371139e-08, 0, -2.6, 0, 1, 0, 1, 0, -1.13649605e-07, 45.4875, 1.35, -72.8125)
 size = Vector3(9.75, 3.8, 1)
 material = SubResource("StandardMaterial3D_h3cb0")
+
+[node name="Torch" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8912042, 1.6350374, 0, -1.6350374, 1.8912042, 0, 0, 0, 2.5, -1.4664038, 1.6262624, 15.882191)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch2" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8912042, 1.6350374, 0, -1.6350374, 1.8912042, 0, 0, 0, 2.5, -1.4664038, 1.6262624, 9.003575)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch2"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch3" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-1.8924879, -1.6335516, -2.1855695e-07, -1.6335516, 1.8924879, 0, 1.6544655e-07, 1.4280961e-07, -2.5, -2.1198943, 1.6262624, 12.471968)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch3"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch4" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, -12.0915985, 1.6262624, 11.211935)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch4"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch5" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, -21.517761, 1.6262624, 15.776188)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch5"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch6" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, -21.517761, 1.6262624, 3.2313251)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch6"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch7" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-1.8924879, -1.6335516, -2.1855695e-07, -1.6335516, 1.8924879, 0, 1.6544655e-07, 1.4280961e-07, -2.5, -16.340492, 1.6262624, 3.2313251)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch7"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch8" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-1.8924879, -1.6335516, -2.1855695e-07, -1.6335516, 1.8924879, 0, 1.6544655e-07, 1.4280961e-07, -2.5, -16.340492, 1.6262624, -8.169603)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch8"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch9" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-1.8924879, -1.6335516, -2.1855695e-07, -1.6335516, 1.8924879, 0, 1.6544655e-07, 1.4280961e-07, -2.5, -10.440356, 1.6262624, -4.308512)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch9"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch10" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, -10.440356, 1.6262624, -16.596445)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch10"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch11" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, -2.3486547, 1.6262624, -16.596445)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch11"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch12" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, -2.5, -1.6335516, 1.8924879, 0, 1.8924879, 1.6335516, -1.09278474e-07, -4.247794, 1.6262624, -21.729027)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch12"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch13" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-1.8924879, -1.6335516, -2.1855695e-07, -1.6335516, 1.8924879, 0, 1.6544655e-07, 1.4280961e-07, -2.5, -4.145543, 1.6262624, -26.695374)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch13"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch14" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-1.8924879, -1.6335516, -2.1855695e-07, -1.6335516, 1.8924879, 0, 1.6544655e-07, 1.4280961e-07, -2.5, 4.575158, 1.6262624, -23.592676)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch14"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch15" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-1.8924879, -1.6335516, -2.1855695e-07, -1.6335516, 1.8924879, 0, 1.6544655e-07, 1.4280961e-07, -2.5, -16.540585, 1.6262624, -27.808628)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch15"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch16" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, -23.92978, 1.6262624, -18.630093)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch16"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch17" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, -23.92978, 1.6262624, -36.775997)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch17"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch18" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-1.8924879, -1.6335516, -2.1855695e-07, -1.6335516, 1.8924879, 0, 1.6544655e-07, 1.4280961e-07, -2.5, -10.214681, 1.6262624, -34.08966)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch18"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch19" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-1.8924879, -1.6335516, -2.1855695e-07, -1.6335516, 1.8924879, 0, 1.6544655e-07, 1.4280961e-07, -2.5, 1.3847132, 1.6262624, -34.08966)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch19"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch20" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, -1.0318303, 1.6262624, -52.571922)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch20"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch21" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, -13.038158, 1.6262624, -59.04067)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch21"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch22" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, -7.772234, 1.6262624, -69.85933)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch22"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch23" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-1.8924879, -1.6335516, 2.1855695e-07, -1.6335516, 1.8924879, 0, -1.6544655e-07, -1.4280961e-07, -2.5, 12.375189, 1.6262624, -69.85933)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch23"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch24" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, 14.65143, 1.6262624, -58.120697)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch24"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch25" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, 34.482937, 1.6262624, -58.180027)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch25"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch26" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, 33.423008, 1.6262624, -71.207146)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch26"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch27" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, 11.283722, 1.6262624, -40.811363)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch27"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch28" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, 11.283722, 1.6262624, -28.372099)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch28"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch29" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, -0.525218, 1.6262624, -28.372099)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch29"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch30" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, -15.891418, 1.6262624, -24.182114)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch30"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch31" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, -4.7899275, 1.6262624, -9.653897)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch31"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch32" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, -1.0839443, 1.6262624, 1.8193607)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch32"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch33" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, 7.048193, 1.6262624, 8.504005)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch33"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch34" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, -2.5, -1.6335516, 1.8924879, 0, 1.8924879, 1.6335516, -1.09278474e-07, 9.29961, 1.6262624, 16.131056)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch34"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch35" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-1.8924879, -1.6335516, 2.1855695e-07, -1.6335516, 1.8924879, 0, -1.6544655e-07, -1.4280961e-07, -2.5, 13.443502, 1.6262624, 11.887072)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch35"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch36" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, 10.891984, 1.6262624, -4.395563)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch36"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch37" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, -2.5, -1.6335516, 1.8924879, 0, 1.8924879, 1.6335516, -1.09278474e-07, 7.262042, 1.6262624, -15.63071)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch37"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch38" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, -2.5, -1.6335516, 1.8924879, 0, 1.8924879, 1.6335516, -1.09278474e-07, 15.273871, 1.6262624, -15.63071)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch38"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch39" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, 8.2026205, 1.6262624, -1.5827801)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch39"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch40" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, -4.7184706, 1.6262624, 5.177976)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch40"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch41" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-1.8924879, -1.6335516, -2.1855695e-07, -1.6335516, 1.8924879, 0, 1.6544655e-07, 1.4280961e-07, -2.5, -7.011647, 1.6262624, -5.2672944)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch41"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch42" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, 17.238792, 1.6262624, -5.2672944)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch42"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch43" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-1.8924879, -1.6335516, -2.1855695e-07, -1.6335516, 1.8924879, 0, 1.6544655e-07, 1.4280961e-07, -2.5, 19.735767, 1.6262624, 6.7782707)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch43"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch44" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, 13.9657755, 1.6262624, 5.8032556)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch44"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch45" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, 17.774109, 1.6262624, 19.008577)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch45"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch46" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, -2.5, -1.6335516, 1.8924879, 0, 1.8924879, 1.6335516, -1.09278474e-07, 30.892757, 1.6262624, 16.2831)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch46"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch47" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, -2.5, -1.6335516, 1.8924879, 0, 1.8924879, 1.6335516, -1.09278474e-07, 37.6598, 1.6262624, -1.2265799)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch47"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch48" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, 32.350494, 1.6262624, 8.65067)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch48"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch49" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, 35.488827, 1.6262624, 11.89534)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch49"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch50" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, 41.284336, 1.6262624, 18.994772)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch50"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch51" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-1.8924879, -1.6335516, 2.1855695e-07, -1.6335516, 1.8924879, 0, -1.6544655e-07, -1.4280961e-07, -2.5, 40.57873, 1.6262624, 14.340722)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch51"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch52" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, 38.023384, 1.6262624, 4.59671)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch52"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch53" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, 40.734, 1.6262624, -0.9381728)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch53"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch54" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, 26.551634, 1.6262624, 0.1443243)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch54"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch55" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, 26.551634, 1.6262624, 14.055957)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch55"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch56" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-1.8924879, -1.6335516, -2.1855695e-07, -1.6335516, 1.8924879, 0, 1.6544655e-07, 1.4280961e-07, -2.5, 31.763235, 1.6262624, 3.19841)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch56"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch57" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-1.8924879, -1.6335516, -2.1855695e-07, -1.6335516, 1.8924879, 0, 1.6544655e-07, 1.4280961e-07, -2.5, 28.58326, 1.6262624, 10.252584)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch57"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch58" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, -2.5, -1.6335516, 1.8924879, 0, 1.8924879, 1.6335516, -1.09278474e-07, 21.565022, 1.6262624, -0.40620136)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch58"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch59" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, -2.5, -1.6335516, 1.8924879, 0, 1.8924879, 1.6335516, -1.09278474e-07, 29.850725, 1.6262624, -9.488159)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch59"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch60" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, -2.5, -1.6335516, 1.8924879, 0, 1.8924879, 1.6335516, -1.09278474e-07, 35.62381, 1.6262624, -6.1372766)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch60"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch61" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, 38.668106, 1.6262624, -10.816654)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch61"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch62" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, 29.351528, 1.6262624, -20.095703)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch62"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch63" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, 23.51848, 1.6262624, -16.248764)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch63"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch64" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, 14.103028, 1.6262624, -16.248764)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch64"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch65" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, 27.908752, 1.6262624, -25.449043)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch65"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch66" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, 33.54145, 1.6262624, -22.457367)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch66"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch67" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-1.8924879, -1.6335516, 2.1855695e-07, -1.6335516, 1.8924879, 0, -1.6544655e-07, -1.4280961e-07, -2.5, 43.1978, 1.6262624, -22.802956)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch67"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch68" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-1.8924879, -1.6335516, 2.1855695e-07, -1.6335516, 1.8924879, 0, -1.6544655e-07, -1.4280961e-07, -2.5, 43.1978, 1.6262624, -5.5766907)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch68"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch69" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-1.8924879, -1.6335516, 2.1855695e-07, -1.6335516, 1.8924879, 0, -1.6544655e-07, -1.4280961e-07, -2.5, 31.521885, 1.6262624, -30.274412)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch69"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch70" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-1.8924879, -1.6335516, 2.1855695e-07, -1.6335516, 1.8924879, 0, -1.6544655e-07, -1.4280961e-07, -2.5, 33.710857, 1.6262624, -33.195854)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch70"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch71" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, 40.194542, 1.6262624, -30.395164)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch71"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch72" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, 40.194542, 1.6262624, -39.045784)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch72"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch73" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, 20.198744, 1.6262624, -37.02337)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch73"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch74" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, 32.335114, 1.6262624, -37.139664)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch74"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch75" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, 21.45637, 1.6262624, -31.679335)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch75"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch76" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, -2.5, -1.6335516, 1.8924879, 0, 1.8924879, 1.6335516, -1.09278474e-07, 19.212584, 1.6262624, -42.505756)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch76"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch77" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, -2.5, -1.6335516, 1.8924879, 0, 1.8924879, 1.6335516, -1.09278474e-07, 33.416275, 1.6262624, -42.505756)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch77"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch78" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(1.8924879, 1.6335516, 0, -1.6335516, 1.8924879, 0, 0, 0, 2.5, 20.23797, 1.6262624, -24.086088)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch78"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch79" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, 15.106932, 1.6262624, -22.893211)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch79"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch80" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, 16.957993, 1.6262624, -28.403017)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch80"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch81" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, -2.5, -1.6335516, 1.8924879, 0, 1.8924879, 1.6335516, -1.09278474e-07, 1.36588, 1.6262624, -27.753214)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch81"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
+
+[node name="Torch82" parent="." instance=ExtResource("5_py0mi")]
+transform = Transform3D(-8.2723275e-08, -7.1404806e-08, 2.5, -1.6335516, 1.8924879, 0, -1.8924879, -1.6335516, -1.09278474e-07, -4.382889, 1.6262624, -22.440388)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Torch82"]
+transform = Transform3D(0.40000004, 7.4505806e-08, 0, -7.4505806e-08, 0.40000004, 0, 0, 0, 0.40000004, 0.031418145, 0.07549229, -0.011259079)
+light_color = Color(0.84705883, 0.5372549, 0, 1)
+light_energy = 2.649
+light_indirect_energy = 1.86
+light_volumetric_fog_energy = 2.08
+light_size = 3.089
+light_specular = 0.824
+omni_range = 8.364
 
 [connection signal="body_entered" from="Boss Door/Enterance Trigger" to="." method="_on_enterance_trigger_body_entered"]
