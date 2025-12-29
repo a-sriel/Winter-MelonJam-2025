@@ -1530,6 +1530,8 @@ texture = ExtResource("3_6e8at")
 
 [node name="Enterance Trigger" type="Area3D" parent="Boss Door"]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 44.6375, 0, -72.4375)
+collision_layer = 0
+collision_mask = 8
 monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Boss Door/Enterance Trigger"]

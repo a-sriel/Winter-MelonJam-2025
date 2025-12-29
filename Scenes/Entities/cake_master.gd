@@ -46,6 +46,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 	if Input.is_action_just_pressed("action_fire"):
 		if pie_count > 0:
+			pie.visible = true
 			pie_count -= 1
 			throw_pie()
 			update_pie_scale()
@@ -53,7 +54,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			#signal that they are out of pies
 			pass
 		
-		if pie_count == 0:
+		if pie_count <= 0:
 			pie.visible = false
 
 func _physics_process(delta: float) -> void:
@@ -126,6 +127,8 @@ func take_shove_from(dir:Vector3, force:float) -> void:
 func update_pie_scale() -> void:
 	var pie_scale = pie_count * .04
 	pie.scale = Vector3(pie_scale, pie_scale, pie_scale)
+	if pie_count > 0:
+		pie.visible = true
 
 func refill_pies(amount:int) -> void:
 	pie_count += amount
