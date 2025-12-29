@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://betfqgwta40em"]
+[gd_scene load_steps=24 format=3 uid="uid://betfqgwta40em"]
 
 [ext_resource type="Script" uid="uid://bxr68sl4epoum" path="res://Scenes/overworld_scene.gd" id="1_vsp5g"]
 [ext_resource type="PackedScene" uid="uid://drdpvnbqqh62w" path="res://Scenes/Entities/Cake Master.tscn" id="2_x04ao"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://cb0xbyidjdmc4" path="res://Assets/Graphics/cave_wall1.png" id="5_s8qc7"]
 [ext_resource type="Texture2D" uid="uid://di5lyeq4t26uf" path="res://Assets/Graphics/foot1.png" id="6_s8qc7"]
 [ext_resource type="PackedScene" uid="uid://hd3212swtnsc" path="res://Assets/Objects/Shroom.fbx" id="7_oxmj4"]
-[ext_resource type="Script" uid="uid://15364fdgcrpo" path="res://Scenes/pause_menu.gd" id="9_x07gn"]
 [ext_resource type="AudioStream" uid="uid://b2ywxb0fgni0f" path="res://Assets/Audio/Music/AMB_Morning_Forest_and_River_Rich_Loop.wav" id="10_gif0i"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_idj7w"]
@@ -382,7 +381,6 @@ polygon = PackedVector2Array(3.8215237, -5.757983, -1.2369311, -1.1996982, 1.212
 [node name="Pause_Menu" type="Node2D" parent="."]
 process_mode = 2
 visible = false
-script = ExtResource("9_x07gn")
 
 [node name="ColorRect" type="ColorRect" parent="Pause_Menu"]
 offset_left = 614.0

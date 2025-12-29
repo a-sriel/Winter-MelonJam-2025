@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://scseolfu2h03"]
+[gd_scene load_steps=18 format=3 uid="uid://scseolfu2h03"]
 
 [ext_resource type="Script" uid="uid://b0ci1xuoj5w30" path="res://Scenes/cave_scene.gd" id="1_3cfdu"]
 [ext_resource type="PackedScene" uid="uid://drdpvnbqqh62w" path="res://Scenes/Entities/Cake Master.tscn" id="1_bkos3"]
@@ -42,6 +42,9 @@ transparency = 1
 albedo_color = Color(0, 0, 0, 1)
 proximity_fade_enabled = true
 proximity_fade_distance = 0.5
+
+[sub_resource type="SystemFont" id="SystemFont_h3cb0"]
+subpixel_positioning = 0
 
 [node name="Cave Scene" type="Node3D"]
 script = ExtResource("1_3cfdu")
@@ -1111,1207 +1114,1448 @@ size = Vector3(0.6845703, 2.4071045, 2.8910043)
 
 [node name="Sprite3D11" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.05, -4.371139e-09, -3.821371e-15, 0, -2.1855695e-09, 1, 4.371139e-09, -0.05, -4.371139e-08, 0, 0.051, 18.042)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D13" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.05, -4.371139e-09, -3.821371e-15, 0, -2.1855695e-09, 1, 4.371139e-09, -0.05, -4.371139e-08, -0.5, 0.051, 16.792)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D14" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.05, -4.371139e-09, -3.821371e-15, 0, -2.1855695e-09, 1, 4.371139e-09, -0.05, -4.371139e-08, 0, 0.051, 15.042)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D15" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.05, -4.371139e-09, -3.821371e-15, 0, -2.1855695e-09, 1, 4.371139e-09, -0.05, -4.371139e-08, -0.5, 0.051, 13.292)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D16" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.05, -4.371139e-09, -3.821371e-15, 0, -2.1855695e-09, 1, 4.371139e-09, -0.05, -4.371139e-08, 0, 0.051, 11.792)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D17" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.05, -4.371139e-09, -3.821371e-15, 0, -2.1855695e-09, 1, 4.371139e-09, -0.05, -4.371139e-08, -0.5, 0.051, 10.042)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D18" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.05, -4.371139e-09, -3.821371e-15, 0, -2.1855695e-09, 1, 4.371139e-09, -0.05, -4.371139e-08, 0, 0.051, 8.542)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D19" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.035355333, -0.03535534, -3.0908616e-08, -1.5529405e-23, -2.1855693e-09, 1, 0.03535534, -0.035355333, -3.0908616e-08, -0.75, 0.051, 7.792)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D20" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(5.5879354e-09, -0.049999997, -4.3711385e-08, -1.5529405e-23, -2.1855693e-09, 1, 0.049999997, 5.5879354e-09, 0, -1.5, 0.051, 6.542)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D21" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.024999993, -0.04330127, -3.785517e-08, -3.6705228e-23, -2.1855693e-09, 1, 0.04330127, -0.024999993, -2.1855692e-08, -2.5, 0.051, 7.292)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D22" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.012940956, -0.048296288, -4.222195e-08, -7.6918546e-17, -2.1855693e-09, 1, 0.048296288, 0.012940956, 1.131334e-08, -3.5, 0.051, 6.542)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D23" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(3.7252903e-09, -0.049999997, -4.371138e-08, -1.1981427e-16, -2.1855693e-09, 1, 0.049999997, 3.7252903e-09, 1.7763568e-15, -4.5, 0.051, 7.292)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D24" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(3.7252903e-09, -0.049999997, -4.371138e-08, -1.1981427e-16, -2.1855693e-09, 1, 0.049999997, 3.7252903e-09, 1.7763568e-15, -5.5, 0.051, 6.792)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D25" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(3.7252903e-09, -0.049999997, -4.371138e-08, -1.1981427e-16, -2.1855693e-09, 1, 0.049999997, 3.7252903e-09, 1.7763568e-15, -7, 0.051, 7.042)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D26" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(3.7252903e-09, -0.049999997, -4.371138e-08, -1.1981427e-16, -2.1855693e-09, 1, 0.049999997, 3.7252903e-09, 1.7763568e-15, -7.75, 0.051, 6.542)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D27" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(3.7252903e-09, -0.049999997, -4.371138e-08, -1.1981427e-16, -2.1855693e-09, 1, 0.049999997, 3.7252903e-09, 1.7763568e-15, -8.5, 0.051, 7.042)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D28" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(3.7252903e-09, -0.049999997, -4.371138e-08, -1.1981427e-16, -2.1855693e-09, 1, 0.049999997, 3.7252903e-09, 1.7763568e-15, -10, 0.051, 6.542)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D29" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(3.7252903e-09, -0.049999997, -4.371138e-08, -1.1981427e-16, -2.1855693e-09, 1, 0.049999997, 3.7252903e-09, 1.7763568e-15, -11.5, 0.051, 7.042)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D30" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(3.7252903e-09, -0.049999997, -4.371138e-08, -1.1981427e-16, -2.1855693e-09, 1, 0.049999997, 3.7252903e-09, 1.7763568e-15, -13.5, 0.051, 6.542)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D31" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(3.7252903e-09, -0.049999997, -4.371138e-08, -1.1981427e-16, -2.1855693e-09, 1, 0.049999997, 3.7252903e-09, 1.7763568e-15, -14.5, 0.051, 7.042)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D32" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(3.7252903e-09, -0.049999997, -4.371138e-08, -1.1981427e-16, -2.1855693e-09, 1, 0.049999997, 3.7252903e-09, 1.7763568e-15, -15.25, 0.051, 6.542)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D33" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.043301266, -0.025, -2.1855687e-08, -2.8555064e-16, -2.1855695e-09, 1, 0.025, -0.043301266, -3.7855166e-08, -16.5, 0.051, 7.042)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D34" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.048296288, -0.012940956, -1.1313334e-08, -2.855506e-16, -2.1855695e-09, 1, 0.012940956, -0.048296288, -4.2221956e-08, -16.75, 0.051, 5.792)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D35" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999997, -3.7252903e-09, 6.217249e-15, -2.395751e-16, -2.1855697e-09, 1, 3.7252903e-09, -0.049999997, -4.371138e-08, -17.25, 0.051, 4.542)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D36" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999997, -3.7252903e-09, 6.217249e-15, -2.395751e-16, -2.1855697e-09, 1, 3.7252903e-09, -0.049999997, -4.371138e-08, -16.75, 0.051, 3.0419998)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D37" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.04330127, 0.024999995, 2.1855696e-08, -2.395751e-16, -2.1855697e-09, 1, -0.024999995, -0.04330127, -3.7855163e-08, -17.25, 0.051, 1.7919998)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D38" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-1.8626451e-09, 0.049999997, 4.3711378e-08, -1.6265658e-16, -2.1855697e-09, 1, -0.049999997, -1.8626451e-09, 1.0658141e-14, -15.75, 0.051, 1.2919998)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D39" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-1.8626451e-09, 0.049999997, 4.3711378e-08, -1.6265658e-16, -2.1855697e-09, 1, -0.049999997, -1.8626451e-09, 1.0658141e-14, -14.5, 0.051, 0.7919998)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D40" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.035355337, 0.035355337, 3.0908616e-08, -1.6265658e-16, -2.1855697e-09, 1, -0.035355337, -0.035355337, -3.0908605e-08, -13, 0.051, 0.29199982)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D41" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999997, 0, 1.2434498e-14, -1.6265658e-16, -2.1855697e-09, 1, 0, -0.049999997, -4.3711374e-08, -12.5, 0.051, -0.7080002)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D42" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999997, 0, 1.2434498e-14, -1.6265658e-16, -2.1855697e-09, 1, 0, -0.049999997, -4.3711374e-08, -12, 0.051, -1.4580002)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D43" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999997, 0, 1.2434498e-14, -1.6265658e-16, -2.1855697e-09, 1, 0, -0.049999997, -4.3711374e-08, -12.25, 0.051, -2.9580002)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D44" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999997, 0, 1.2434498e-14, -1.6265658e-16, -2.1855697e-09, 1, 0, -0.049999997, -4.3711374e-08, -11.75, 0.051, -3.9580002)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D45" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999997, 0, 1.2434498e-14, -1.6265658e-16, -2.1855697e-09, 1, 0, -0.049999997, -4.3711374e-08, -12, 0.051, -5.208)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D46" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999997, 0, 1.2434498e-14, -1.6265658e-16, -2.1855697e-09, 1, 0, -0.049999997, -4.3711374e-08, -11.5, 0.051, -6.708)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D47" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999997, 0, 1.2434498e-14, -1.6265658e-16, -2.1855697e-09, 1, 0, -0.049999997, -4.3711374e-08, -11.75, 0.051, -7.958)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D48" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.043301266, 0.024999999, 2.1855698e-08, -1.6265657e-16, -2.1855697e-09, 1, -0.024999999, -0.043301266, -3.7855152e-08, -11, 0.051, -9.208)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D49" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.025, 0.04330127, 3.7855166e-08, -1.5075723e-16, -2.1855695e-09, 1, -0.04330127, -0.025, -2.185568e-08, -10.5, 0.051, -10.458)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D50" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.049999997, 4.3711367e-08, -7.383872e-17, -2.1855695e-09, 1, -0.049999997, 0, 8.881784e-15, -9.5, 0.051, -10.458)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D51" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.049999997, 4.3711367e-08, -7.383872e-17, -2.1855695e-09, 1, -0.049999997, 0, 8.881784e-15, -8, 0.051, -10.958)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D52" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.049999997, 4.3711367e-08, -7.383872e-17, -2.1855695e-09, 1, -0.049999997, 0, 8.881784e-15, -6.75, 0.051, -10.708)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D53" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.049999997, 4.3711367e-08, -7.383872e-17, -2.1855695e-09, 1, -0.049999997, 0, 8.881784e-15, -5.25, 0.051, -11.208)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D54" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.049999997, 4.3711367e-08, -7.383872e-17, -2.1855695e-09, 1, -0.049999997, 0, 8.881784e-15, -3.75, 0.051, -10.708)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D55" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.049999997, 4.3711367e-08, -7.383872e-17, -2.1855695e-09, 1, -0.049999997, 0, 8.881784e-15, -2.25, 0.051, -11.208)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D56" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.049999997, 4.3711367e-08, -7.383872e-17, -2.1855695e-09, 1, -0.049999997, 0, 8.881784e-15, -0.75, 0.051, -10.708)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D57" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.049999997, 4.3711367e-08, -7.383872e-17, -2.1855695e-09, 1, -0.049999997, 0, 8.881784e-15, 1, 0.051, -11.208)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D58" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.049999997, 4.3711367e-08, -7.383872e-17, -2.1855695e-09, 1, -0.049999997, 0, 8.881784e-15, 3, 0.051, -10.708)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D59" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.049999997, 4.3711367e-08, -7.383872e-17, -2.1855695e-09, 1, -0.049999997, 0, 8.881784e-15, 5, 0.051, -11.208)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D60" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.049999997, 4.3711367e-08, -7.383872e-17, -2.1855695e-09, 1, -0.049999997, 0, 8.881784e-15, 7.25, 0.051, -10.708)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D61" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.049999997, 4.3711367e-08, -7.383872e-17, -2.1855695e-09, 1, -0.049999997, 0, 8.881784e-15, 9, 0.051, -11.208)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D62" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.024999999, 0.043301266, 3.785515e-08, -7.383872e-17, -2.1855695e-09, 1, -0.043301266, 0.024999999, 2.185569e-08, 10.5, 0.051, -10.458)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D63" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.04330127, 0.025, 2.185568e-08, -1.6265656e-16, -2.1855697e-09, 1, -0.025, 0.04330127, 3.7855163e-08, 12, 0.051, -10.208)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D64" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.049999997, 0, -8.881784e-15, -7.3838714e-17, -2.18557e-09, 1, 0, 0.049999997, 4.3711367e-08, 12, 0.051, -8.708)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D65" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.049999997, 0, -8.881784e-15, -7.3838714e-17, -2.18557e-09, 1, 0, 0.049999997, 4.3711367e-08, 12.5, 0.051, -6.708)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D66" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.049999997, 0, -8.881784e-15, -7.3838714e-17, -2.18557e-09, 1, 0, 0.049999997, 4.3711367e-08, 12, 0.051, -5.208)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D67" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.049999997, 0, -8.881784e-15, -7.3838714e-17, -2.18557e-09, 1, 0, 0.049999997, 4.3711367e-08, 12.25, 0.051, -3.7080002)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D68" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.049999997, 0, -8.881784e-15, -7.3838714e-17, -2.18557e-09, 1, 0, 0.049999997, 4.3711367e-08, 11.75, 0.051, -1.9580002)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D69" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.048296288, 0.012940952, 1.1313325e-08, -7.3838714e-17, -2.18557e-09, 1, -0.012940952, 0.048296288, 4.222194e-08, 12.75, 0.051, -0.20800018)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D70" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.012940949, 0.048296288, 4.2221938e-08, -1.1673443e-16, -2.18557e-09, 1, -0.048296288, 0.012940949, 1.13133405e-08, 13.75, 0.051, 0.7919998)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D71" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.012940949, 0.048296288, 4.2221938e-08, -2.0560564e-16, -2.1855702e-09, 1, -0.048296288, 0.012940949, 1.1313341e-08, 15.25, 0.051, 0.7919998)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D72" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.012940949, 0.048296288, 4.2221938e-08, -2.0560564e-16, -2.1855702e-09, 1, -0.048296288, 0.012940949, 1.1313341e-08, 16.5, 0.051, 1.2919998)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D73" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.035355333, 0.035355337, 3.0908602e-08, -1.6270992e-16, -2.1855702e-09, 1, -0.035355337, 0.035355333, 3.090861e-08, 18, 0.051, 1.2919998)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D74" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.048296284, 0.012940953, 1.1313331e-08, -4.139247e-16, -2.1855702e-09, 1, -0.012940953, 0.048296284, 4.222195e-08, 18.25, 0.051, 2.7919998)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D75" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.04999999, 2.7939677e-09, -6.217249e-15, -3.71029e-16, -2.1855702e-09, 1, -2.7939677e-09, 0.04999999, 4.371137e-08, 19, 0.051, 4.042)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D76" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.04999999, 2.7939677e-09, -6.217249e-15, -3.71029e-16, -2.1855702e-09, 1, -2.7939677e-09, 0.04999999, 4.371137e-08, 18.4, 0.051, 5.6419997)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D77" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.04999999, 2.7939677e-09, -6.217249e-15, -3.71029e-16, -2.1855702e-09, 1, -2.7939677e-09, 0.04999999, 4.371137e-08, 18.9, 0.051, 7.342)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D78" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.04999999, 2.7939677e-09, -6.217249e-15, -3.71029e-16, -2.1855702e-09, 1, -2.7939677e-09, 0.04999999, 4.371137e-08, 18.199999, 0.051, 10.242001)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D79" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.035355326, 0.035355333, 3.0908602e-08, -3.71029e-16, -2.1855702e-09, 1, -0.035355333, 0.035355326, 3.090861e-08, 19.099998, 0.051, 11.842001)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D80" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.04999999, 4.3711374e-08, -1.1981428e-16, -2.1855702e-09, 1, -0.04999999, 0, 7.1054274e-15, 20.499998, 0.051, 13.042001)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D81" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.04999999, 4.3711374e-08, -1.1981428e-16, -2.1855702e-09, 1, -0.04999999, 0, 7.1054274e-15, 22.499998, 0.051, 12.642001)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D82" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.04999999, 4.3711374e-08, -1.1981428e-16, -2.1855702e-09, 1, -0.04999999, 0, 7.1054274e-15, 24.499998, 0.051, 13.242002)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D83" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.04999999, 4.3711374e-08, -1.1981428e-16, -2.1855702e-09, 1, -0.04999999, 0, 7.1054274e-15, 26.599998, 0.051, 12.642001)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D84" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.024999995, 0.043301262, 3.7855166e-08, -1.1981428e-16, -2.1855702e-09, 1, -0.043301262, -0.024999995, -2.1855682e-08, 28.8, 0.051, 13.342001)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D85" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.043301262, 0.024999997, 2.1855694e-08, -1.1981428e-16, -2.1855702e-09, 1, -0.024999997, -0.043301262, -3.785516e-08, 29.9, 0.051, 11.642001)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D86" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999993, 0, 8.881784e-15, -1.1981428e-16, -2.1855702e-09, 1, 0, -0.049999993, -4.3711374e-08, 30.9, 0.051, 9.942001)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D87" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999993, 0, 8.881784e-15, -1.1981428e-16, -2.1855702e-09, 1, 0, -0.049999993, -4.3711374e-08, 30.4, 0.051, 8.442001)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D88" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999993, 0, 8.881784e-15, -1.1981428e-16, -2.1855702e-09, 1, 0, -0.049999993, -4.3711374e-08, 31, 0.051, 6.2420015)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D89" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999993, 0, 8.881784e-15, -1.1981428e-16, -2.1855702e-09, 1, 0, -0.049999993, -4.3711374e-08, 30.4, 0.051, 4.2420015)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D90" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999993, 0, 8.881784e-15, -1.1981428e-16, -2.1855702e-09, 1, 0, -0.049999993, -4.3711374e-08, 30.9, 0.051, 2.0420015)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D91" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999993, 0, 8.881784e-15, -1.1981428e-16, -2.1855702e-09, 1, 0, -0.049999993, -4.3711374e-08, 30.4, 0.051, 0.24200141)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D92" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999993, 0, 8.881784e-15, -1.1981428e-16, -2.1855702e-09, 1, 0, -0.049999993, -4.3711374e-08, 30.8, 0.051, -1.3579986)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D93" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999993, 0, 8.881784e-15, -1.1981428e-16, -2.1855702e-09, 1, 0, -0.049999993, -4.3711374e-08, 30.5, 0.051, -2.9579988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D94" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.035355333, 0.035355333, 3.0908616e-08, -1.1981428e-16, -2.1855702e-09, 1, -0.035355333, -0.035355333, -3.0908602e-08, 31.5, 0.051, -3.9579988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D95" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.049999986, 4.3711367e-08, 5.7930966e-18, -2.18557e-09, 1, -0.049999986, 0, 8.881784e-15, 32.5, 0.051, -4.9579988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D96" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.049999986, 4.3711367e-08, 5.7930966e-18, -2.18557e-09, 1, -0.049999986, 0, 8.881784e-15, 33.9, 0.051, -4.4579988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D97" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.049999986, 4.3711367e-08, 5.7930966e-18, -2.18557e-09, 1, -0.049999986, 0, 8.881784e-15, 35.5, 0.051, -4.9579988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D98" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.049999986, 4.3711367e-08, 5.7930966e-18, -2.18557e-09, 1, -0.049999986, 0, 8.881784e-15, 37.4, 0.051, -4.4579988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D99" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, 0.049999986, 4.3711367e-08, 5.7930966e-18, -2.18557e-09, 1, -0.049999986, 0, 8.881784e-15, 38.9, 0.051, -5.1579986)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D100" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.03535533, 0.03535533, 3.0908605e-08, 5.7930966e-18, -2.18557e-09, 1, -0.03535533, -0.03535533, -3.0908595e-08, 40.7, 0.051, -5.0579987)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D101" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.048296284, 0.012940951, 1.1313338e-08, 5.7930966e-18, -2.18557e-09, 1, -0.012940951, -0.048296284, -4.2221934e-08, 41.9, 0.051, -6.3579984)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D102" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.04999999, -9.313226e-10, 2.6645353e-15, -4.0182396e-17, -2.1855702e-09, 1, 9.313226e-10, -0.04999999, -4.371136e-08, 41.7, 0.051, -8.157998)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D103" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.04999999, -9.313226e-10, 2.6645353e-15, -4.0182396e-17, -2.1855702e-09, 1, 9.313226e-10, -0.04999999, -4.371136e-08, 42.3, 0.051, -9.857998)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D104" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.04999999, -9.313226e-10, 2.6645353e-15, -4.0182396e-17, -2.1855702e-09, 1, 9.313226e-10, -0.04999999, -4.371136e-08, 41.899998, 0.051, -11.557998)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D105" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.04999999, -9.313226e-10, 2.6645353e-15, -4.0182396e-17, -2.1855702e-09, 1, 9.313226e-10, -0.04999999, -4.371136e-08, 42.3, 0.051, -12.957997)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D106" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.04999999, -9.313226e-10, 2.6645353e-15, -4.0182396e-17, -2.1855702e-09, 1, 9.313226e-10, -0.04999999, -4.371136e-08, 42, 0.051, -14.7579975)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D107" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.04999999, -9.313226e-10, 2.6645353e-15, -4.0182396e-17, -2.1855702e-09, 1, 9.313226e-10, -0.04999999, -4.371136e-08, 42.6, 0.051, -18.257998)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D108" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.04999999, -9.313226e-10, 2.6645353e-15, -4.0182396e-17, -2.1855702e-09, 1, 9.313226e-10, -0.04999999, -4.371136e-08, 42, 0.051, -20.457998)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D109" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.04829628, -0.012940951, -1.131333e-08, -4.0182396e-17, -2.1855702e-09, 1, 0.012940951, -0.04829628, -4.2221934e-08, 42.5, 0.051, -22.457998)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D110" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.024999993, -0.043301262, -3.7855145e-08, -4.0182393e-17, -2.18557e-09, 0.99999994, 0.043301262, -0.024999993, -2.1855675e-08, 40.9, 0.051, -23.257998)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D111" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(3.7252903e-09, -0.049999986, -4.3711353e-08, -4.0182393e-17, -2.18557e-09, 0.99999994, 0.049999986, 3.7252903e-09, 7.1054274e-15, 39, 0.051, -24.257998)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D112" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.02499999, -0.043301262, -3.7855145e-08, -4.0182393e-17, -2.18557e-09, 0.99999994, 0.043301262, -0.02499999, -2.1855671e-08, 37.6, 0.051, -24.257998)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D113" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.043301255, -0.024999999, -2.1855683e-08, -5.2081707e-17, -2.1855702e-09, 0.99999994, 0.024999999, -0.043301255, -3.7855138e-08, 37.1, 0.051, -25.657997)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D114" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999986, -5.5879354e-09, -8.881784e-15, -5.2081707e-17, -2.1855702e-09, 0.99999994, 5.5879354e-09, -0.049999986, -4.3711353e-08, 36.399998, 0.051, -26.957996)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D115" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.035355333, 0.035355326, 3.0908588e-08, -5.2081707e-17, -2.1855702e-09, 0.99999994, -0.035355326, -0.035355333, -3.0908602e-08, 36.999996, 0.051, -27.957996)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D116" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-5.5879354e-09, 0.049999982, 4.3711346e-08, -5.2081703e-17, -2.18557e-09, 0.9999999, -0.049999982, -5.5879354e-09, -7.1054274e-15, 38.299995, 0.051, -29.157997)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D117" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.012940952, 0.04829627, 4.222191e-08, -5.2081743e-17, -2.1855697e-09, 0.9999999, -0.04829627, -0.012940952, -1.1313333e-08, 39.799995, 0.051, -28.857998)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D118" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.035355333, 0.035355326, 3.0908584e-08, -1.4095295e-16, -2.1855697e-09, 1, -0.035355326, -0.035355333, -3.090859e-08, 40.699997, 0.051, -29.757998)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D119" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.048296288, 0.012940949, 1.1313324e-08, -2.6656032e-16, -2.18557e-09, 1, -0.012940949, -0.048296288, -4.222192e-08, 41.999996, 0.051, -31.157997)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D120" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999993, -2.7939677e-09, -7.1054274e-15, -3.5543152e-16, -2.1855702e-09, 1, 2.7939677e-09, -0.049999993, -4.3711346e-08, 41.599995, 0.051, -32.757996)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D121" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999993, -2.7939677e-09, -7.1054274e-15, -3.5543152e-16, -2.1855702e-09, 1, 2.7939677e-09, -0.049999993, -4.3711346e-08, 42.099995, 0.051, -34.357994)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D122" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999993, -2.7939677e-09, -7.1054274e-15, -3.5543152e-16, -2.1855702e-09, 1, 2.7939677e-09, -0.049999993, -4.3711346e-08, 41.599995, 0.051, -36.557995)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D123" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999993, -2.7939677e-09, -7.1054274e-15, -3.5543152e-16, -2.1855702e-09, 1, 2.7939677e-09, -0.049999993, -4.3711346e-08, 42.199993, 0.051, -38.557995)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D124" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.048296284, -0.0129409535, -1.1313336e-08, -3.5543152e-16, -2.1855702e-09, 1, 0.0129409535, -0.048296284, -4.222191e-08, 41.499992, 0.051, -39.757996)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D125" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.024999991, -0.043301262, -3.7855134e-08, -3.9832722e-16, -2.1855702e-09, 1, 0.043301262, -0.024999991, -2.1855662e-08, 40.699993, 0.051, -41.257996)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D126" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.012940945, -0.04829628, -4.222191e-08, -3.983272e-16, -2.18557e-09, 0.99999994, 0.04829628, -0.012940945, -1.13133165e-08, 38.999992, 0.051, -41.057995)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D127" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(4.656613e-09, -0.049999986, -4.371133e-08, -4.412229e-16, -2.18557e-09, 0.99999994, 0.049999986, 4.656613e-09, 8.881784e-15, 37.699993, 0.051, -41.557995)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D128" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(4.656613e-09, -0.049999986, -4.371133e-08, -4.412229e-16, -2.18557e-09, 0.99999994, 0.049999986, 4.656613e-09, 8.881784e-15, 35.699993, 0.051, -41.057995)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D129" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(4.656613e-09, -0.049999986, -4.371133e-08, -4.412229e-16, -2.18557e-09, 0.99999994, 0.049999986, 4.656613e-09, 8.881784e-15, 34.499992, 0.051, -41.557995)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D130" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(4.656613e-09, -0.049999986, -4.371133e-08, -4.412229e-16, -2.18557e-09, 0.99999994, 0.049999986, 4.656613e-09, 8.881784e-15, 32.79999, 0.051, -41.057995)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D131" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(4.656613e-09, -0.049999986, -4.371133e-08, -4.412229e-16, -2.18557e-09, 0.99999994, 0.049999986, 4.656613e-09, 8.881784e-15, 31.199991, 0.051, -41.657993)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D132" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(4.656613e-09, -0.049999986, -4.371133e-08, -4.412229e-16, -2.18557e-09, 0.99999994, 0.049999986, 4.656613e-09, 8.881784e-15, 27.99999, 0.051, -41.057995)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D133" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(4.656613e-09, -0.049999986, -4.371133e-08, -4.412229e-16, -2.18557e-09, 0.99999994, 0.049999986, 4.656613e-09, 8.881784e-15, 26.29999, 0.051, -41.657993)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D134" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(4.656613e-09, -0.049999986, -4.371133e-08, -4.412229e-16, -2.18557e-09, 0.99999994, 0.049999986, 4.656613e-09, 8.881784e-15, 24.39999, 0.051, -41.25799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D135" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(4.656613e-09, -0.049999986, -4.371133e-08, -4.412229e-16, -2.18557e-09, 0.99999994, 0.049999986, 4.656613e-09, 8.881784e-15, 22.49999, 0.051, -41.957993)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D136" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(4.656613e-09, -0.049999986, -4.371133e-08, -4.412229e-16, -2.18557e-09, 0.99999994, 0.049999986, 4.656613e-09, 8.881784e-15, 20.699991, 0.051, -41.55799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D137" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(4.656613e-09, -0.049999986, -4.371133e-08, -4.412229e-16, -2.18557e-09, 0.99999994, 0.049999986, 4.656613e-09, 8.881784e-15, 18.59999, 0.051, -42.15799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D138" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(4.656613e-09, -0.049999986, -4.371133e-08, -4.412229e-16, -2.18557e-09, 0.99999994, 0.049999986, 4.656613e-09, 8.881784e-15, 18.59999, 0.051, -42.15799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D139" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(4.656613e-09, -0.049999986, -4.371133e-08, -4.412229e-16, -2.18557e-09, 0.99999994, 0.049999986, 4.656613e-09, 8.881784e-15, 16.49999, 0.051, -41.55799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D140" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.0129409535, -0.048296276, -4.2221895e-08, -4.412229e-16, -2.18557e-09, 0.99999994, 0.048296276, 0.0129409535, 1.1313334e-08, 14.69999, 0.051, -41.65799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D141" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.035355333, -0.035355326, -3.0908563e-08, -4.841186e-16, -2.1855697e-09, 0.9999999, 0.035355326, 0.035355333, 3.090858e-08, 13.39999, 0.051, -40.45799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D142" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.048296273, -0.012940943, -1.1313308e-08, -7.353333e-16, -2.1855695e-09, 0.99999976, 0.012940943, 0.048296273, 4.2221888e-08, 12.09999, 0.051, -38.95799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D143" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.04999998, 3.7252903e-09, 1.15463195e-14, -7.78229e-16, -2.1855695e-09, 0.99999976, -3.7252903e-09, 0.04999998, 4.3711314e-08, 12.4999895, 0.051, -37.557987)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D144" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.04999998, 3.7252903e-09, 1.15463195e-14, -7.78229e-16, -2.1855695e-09, 0.99999976, -3.7252903e-09, 0.04999998, 4.3711314e-08, 11.9999895, 0.051, -35.757988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D145" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.04999998, 3.7252903e-09, 1.15463195e-14, -7.78229e-16, -2.1855695e-09, 0.99999976, -3.7252903e-09, 0.04999998, 4.3711314e-08, 12.399989, 0.051, -33.95799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D146" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.049999975, 3.7252903e-09, 1.0658141e-14, -7.353334e-16, -2.1855697e-09, 0.9999999, -3.7252903e-09, 0.049999975, 4.3711314e-08, 11.699989, 0.051, -31.857988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D147" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.043301243, -0.024999982, -2.1855644e-08, -7.353334e-16, -2.1855695e-09, 0.9999999, 0.024999982, 0.043301243, 3.785511e-08, 12.099989, 0.051, -30.757988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D148" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.024999984, -0.04330124, -3.7855095e-08, -8.1225187e-16, -2.1855695e-09, 0.9999999, 0.04330124, 0.024999984, 2.1855659e-08, 10.899989, 0.051, -29.757988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D149" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.012940943, -0.048296258, -4.2221878e-08, -7.234342e-16, -2.18557e-09, 1, 0.048296258, 0.012940943, 1.1313325e-08, 9.299989, 0.051, -30.157988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D150" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.012940942, -0.048296254, -4.222188e-08, -6.7745875e-16, -2.1855702e-09, 1, 0.048296254, -0.012940942, -1.13133085e-08, 7.9999886, 0.051, -29.757988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D151" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, -0.04999996, -4.3711307e-08, -6.805385e-16, -2.1855704e-09, 1, 0.04999996, 0, 9.769963e-15, 6.3999887, 0.051, -30.257988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D152" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0, -0.04999996, -4.3711307e-08, -6.805385e-16, -2.1855704e-09, 1, 0.04999996, 0, 9.769963e-15, 4.6999884, 0.051, -29.857988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D153" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.01294094, -0.04829625, -4.222188e-08, -6.805385e-16, -2.1855702e-09, 1, 0.04829625, -0.01294094, -1.1313307e-08, 2.8999882, 0.051, -30.457989)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D154" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.024999976, -0.043301232, -3.7855102e-08, -7.26514e-16, -2.1855704e-09, 1, 0.043301232, -0.024999976, -2.185564e-08, 1.3999882, 0.051, -29.857988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D155" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.043301232, -0.024999976, -2.1855652e-08, -7.3846667e-16, -2.18557e-09, 0.99999994, 0.024999976, -0.043301232, -3.7855084e-08, 0.6999881, 0.051, -31.357988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D156" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 1.8626451e-09, -5.3290705e-15, -6.495955e-16, -2.1855702e-09, 0.99999994, -1.8626451e-09, -0.049999952, -4.3711296e-08, -0.50001186, 0.051, -32.65799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D157" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 1.8626451e-09, -5.3290705e-15, -6.495955e-16, -2.1855702e-09, 0.99999994, -1.8626451e-09, -0.049999952, -4.3711296e-08, 0.09998816, 0.051, -33.85799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D158" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 1.8626451e-09, -5.3290705e-15, -6.495955e-16, -2.1855702e-09, 0.99999994, -1.8626451e-09, -0.049999952, -4.3711296e-08, -0.50001186, 0.051, -35.55799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D159" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 1.8626451e-09, -5.3290705e-15, -6.495955e-16, -2.1855702e-09, 0.99999994, -1.8626451e-09, -0.049999952, -4.3711296e-08, -1.1861324e-05, 0.051, -36.85799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D160" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 1.8626451e-09, -5.3290705e-15, -6.495955e-16, -2.1855702e-09, 0.99999994, -1.8626451e-09, -0.049999952, -4.3711296e-08, -0.30001187, 0.051, -38.35799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D161" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 1.8626451e-09, -5.3290705e-15, -6.495955e-16, -2.1855702e-09, 0.99999994, -1.8626451e-09, -0.049999952, -4.3711296e-08, 0.3999881, 0.051, -39.85799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D162" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 1.8626451e-09, -5.3290705e-15, -6.495955e-16, -2.1855702e-09, 0.99999994, -1.8626451e-09, -0.049999952, -4.3711296e-08, 0.0999881, 0.051, -41.75799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D163" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 1.8626451e-09, -5.3290705e-15, -6.495955e-16, -2.1855702e-09, 0.99999994, -1.8626451e-09, -0.049999952, -4.3711296e-08, 0.5999881, 0.051, -43.25799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D164" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 1.8626451e-09, -5.3290705e-15, -6.495955e-16, -2.1855702e-09, 0.99999994, -1.8626451e-09, -0.049999952, -4.3711296e-08, 0.2999881, 0.051, -44.657993)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D165" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 1.8626451e-09, -5.3290705e-15, -6.495955e-16, -2.1855702e-09, 0.99999994, -1.8626451e-09, -0.049999952, -4.3711296e-08, 1.0999881, 0.051, -46.557995)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D166" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 1.8626451e-09, -5.3290705e-15, -6.495955e-16, -2.1855702e-09, 0.99999994, -1.8626451e-09, -0.049999952, -4.3711296e-08, 0.6999881, 0.051, -48.057995)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D167" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 1.8626451e-09, -5.3290705e-15, -6.495955e-16, -2.1855702e-09, 0.99999994, -1.8626451e-09, -0.049999952, -4.3711296e-08, 1.2999882, 0.051, -49.857994)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D168" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 1.8626451e-09, -5.3290705e-15, -6.495955e-16, -2.1855702e-09, 0.99999994, -1.8626451e-09, -0.049999952, -4.3711296e-08, 0.59998816, 0.051, -51.157993)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D169" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 1.8626451e-09, -5.3290705e-15, -6.495955e-16, -2.1855702e-09, 0.99999994, -1.8626451e-09, -0.049999952, -4.3711296e-08, 0.8999882, 0.051, -53.157993)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D170" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 1.8626451e-09, -5.3290705e-15, -6.495955e-16, -2.1855702e-09, 0.99999994, -1.8626451e-09, -0.049999952, -4.3711296e-08, 0.19998819, 0.051, -54.457993)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D171" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 1.8626451e-09, -5.3290705e-15, -6.495955e-16, -2.1855702e-09, 0.99999994, -1.8626451e-09, -0.049999952, -4.3711296e-08, 0.4999882, 0.051, -56.05799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D172" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.048296243, -0.012940938, -1.1313321e-08, -6.495956e-16, -2.1855702e-09, 0.99999994, 0.012940938, -0.048296243, -4.2221874e-08, -0.20001179, 0.051, -57.25799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D173" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.024999972, -0.04330122, -3.7855095e-08, -7.384667e-16, -2.18557e-09, 0.99999994, 0.04330122, -0.024999972, -2.1855646e-08, -0.40001178, 0.051, -58.25799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D174" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.01294094, -0.048296236, -4.2221874e-08, -8.1538515e-16, -2.18557e-09, 0.99999994, 0.048296236, -0.01294094, -1.1313313e-08, -1.6000118, 0.051, -58.35799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D175" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.01294094, -0.048296236, -4.2221874e-08, -8.1538515e-16, -2.18557e-09, 0.99999994, 0.048296236, -0.01294094, -1.1313313e-08, -2.7000117, 0.051, -58.95799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D176" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.01294094, -0.048296236, -4.2221874e-08, -8.1538515e-16, -2.18557e-09, 0.99999994, 0.048296236, -0.01294094, -1.1313313e-08, -3.9000118, 0.051, -58.757988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D177" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-2.7939677e-09, -0.049999945, -4.37113e-08, -7.6940963e-16, -2.1855695e-09, 0.9999999, 0.049999945, -2.7939677e-09, 2.6645353e-15, -4.8000116, 0.051, -59.757988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D178" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-2.7939677e-09, -0.049999945, -4.37113e-08, -7.6940963e-16, -2.1855695e-09, 0.9999999, 0.049999945, -2.7939677e-09, 2.6645353e-15, -6.2000117, 0.051, -59.257988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D179" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-2.7939677e-09, -0.049999945, -4.37113e-08, -7.6940963e-16, -2.1855695e-09, 0.9999999, 0.049999945, -2.7939677e-09, 2.6645353e-15, -7.8000116, 0.051, -59.757988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D180" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-2.7939677e-09, -0.049999945, -4.37113e-08, -7.6940963e-16, -2.1855695e-09, 0.9999999, 0.049999945, -2.7939677e-09, 2.6645353e-15, -9.300012, 0.051, -59.257988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D181" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.01294094, -0.04829624, -4.2221878e-08, -7.6940974e-16, -2.1855697e-09, 1, 0.04829624, -0.01294094, -1.1313314e-08, -10.400012, 0.051, -59.757988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D182" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.035355303, -0.035355296, -3.0908563e-08, -7.6940974e-16, -2.1855697e-09, 1, 0.035355296, -0.035355303, -3.0908556e-08, -11.600012, 0.051, -59.757988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D183" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.04829624, -0.012940932, -1.1313318e-08, -6.438025e-16, -2.1855695e-09, 1, 0.012940932, -0.04829624, -4.222187e-08, -12.100012, 0.051, -61.057987)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D184" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 6.519258e-09, -2.6645353e-15, -6.468823e-16, -2.1855697e-09, 1, -6.519258e-09, -0.049999952, -4.37113e-08, -12.700012, 0.051, -62.057987)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D185" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 6.519258e-09, -2.6645353e-15, -6.468823e-16, -2.1855697e-09, 1, -6.519258e-09, -0.049999952, -4.37113e-08, -12.400012, 0.051, -63.257988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D186" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 6.519258e-09, -2.6645353e-15, -6.468823e-16, -2.1855697e-09, 1, -6.519258e-09, -0.049999952, -4.37113e-08, -12.800012, 0.051, -64.957985)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D187" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 6.519258e-09, -2.6645353e-15, -6.468823e-16, -2.1855697e-09, 1, -6.519258e-09, -0.049999952, -4.37113e-08, -12.300012, 0.051, -65.957985)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D188" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999952, 6.519258e-09, -2.6645353e-15, -6.468823e-16, -2.1855697e-09, 1, -6.519258e-09, -0.049999952, -4.37113e-08, -12.800012, 0.051, -67.25799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D189" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.048296243, 0.012940946, 1.1313313e-08, -6.4688234e-16, -2.1855695e-09, 1, -0.012940946, -0.048296243, -4.2221874e-08, -12.300012, 0.051, -69.25799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D190" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.0353553, 0.035355307, 3.0908556e-08, -6.928578e-16, -2.1855697e-09, 1, -0.035355307, -0.0353553, -3.090856e-08, -11.900012, 0.051, -70.457985)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D191" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.012940934, 0.048296243, 4.222187e-08, -5.6725055e-16, -2.1855695e-09, 1, -0.048296243, -0.012940934, -1.13133165e-08, -10.300012, 0.051, -70.55798)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D192" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(5.5879354e-09, 0.04999994, 4.3711292e-08, -5.6725055e-16, -2.1855695e-09, 1, -0.04999994, 5.5879354e-09, -8.881784e-16, -9.000011, 0.051, -70.957985)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D193" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(5.5879354e-09, 0.04999994, 4.3711292e-08, -5.6725055e-16, -2.1855695e-09, 1, -0.04999994, 5.5879354e-09, -8.881784e-16, -7.8000116, 0.051, -70.35799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D194" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(5.5879354e-09, 0.04999994, 4.3711292e-08, -5.6725055e-16, -2.1855695e-09, 1, -0.04999994, 5.5879354e-09, -8.881784e-16, -6.3000116, 0.051, -70.85799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D195" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(5.5879354e-09, 0.04999994, 4.3711292e-08, -5.6725055e-16, -2.1855695e-09, 1, -0.04999994, 5.5879354e-09, -8.881784e-16, -4.8000116, 0.051, -70.457985)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D196" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(5.5879354e-09, 0.04999994, 4.3711292e-08, -5.6725055e-16, -2.1855695e-09, 1, -0.04999994, 5.5879354e-09, -8.881784e-16, -3.4000115, 0.051, -70.85799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D197" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(5.5879354e-09, 0.04999994, 4.3711292e-08, -5.6725055e-16, -2.1855695e-09, 1, -0.04999994, 5.5879354e-09, -8.881784e-16, -2.1000113, 0.051, -70.65799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D198" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(5.5879354e-09, 0.04999994, 4.3711292e-08, -5.6725055e-16, -2.1855695e-09, 1, -0.04999994, 5.5879354e-09, -8.881784e-16, -0.60001135, 0.051, -71.05799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D199" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(5.5879354e-09, 0.04999994, 4.3711292e-08, -5.6725055e-16, -2.1855695e-09, 1, -0.04999994, 5.5879354e-09, -8.881784e-16, 0.6999887, 0.051, -70.857994)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D200" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(5.5879354e-09, 0.04999994, 4.3711292e-08, -5.6725055e-16, -2.1855695e-09, 1, -0.04999994, 5.5879354e-09, -8.881784e-16, 1.8999888, 0.051, -71.45799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D201" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(5.5879354e-09, 0.04999994, 4.3711292e-08, -5.6725055e-16, -2.1855695e-09, 1, -0.04999994, 5.5879354e-09, -8.881784e-16, 2.8999887, 0.051, -71.15799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D202" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(5.5879354e-09, 0.04999994, 4.3711292e-08, -5.6725055e-16, -2.1855695e-09, 1, -0.04999994, 5.5879354e-09, -8.881784e-16, 4.4999886, 0.051, -71.75799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D203" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(5.5879354e-09, 0.04999994, 4.3711292e-08, -5.6725055e-16, -2.1855695e-09, 1, -0.04999994, 5.5879354e-09, -8.881784e-16, 5.7999887, 0.051, -71.35799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D204" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(5.5879354e-09, 0.04999994, 4.3711292e-08, -5.6725055e-16, -2.1855695e-09, 1, -0.04999994, 5.5879354e-09, -8.881784e-16, 7.199989, 0.051, -71.75799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D205" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(5.5879354e-09, 0.04999994, 4.3711292e-08, -5.6725055e-16, -2.1855695e-09, 1, -0.04999994, 5.5879354e-09, -8.881784e-16, 8.399989, 0.051, -71.25799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D206" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.024999974, 0.043301214, 3.785509e-08, -5.6725055e-16, -2.1855695e-09, 1, -0.043301214, 0.024999974, 2.1855644e-08, 9.4999895, 0.051, -71.55799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D207" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.0353553, 0.035355292, 3.0908556e-08, -7.3298674e-16, -2.1855697e-09, 1, -0.035355292, 0.0353553, 3.090855e-08, 9.899989, 0.051, -70.857994)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D208" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.048296236, 0.01294093, 1.131332e-08, -7.3298674e-16, -2.1855697e-09, 1, -0.01294093, 0.048296236, 4.2221863e-08, 10.599989, 0.051, -70.45799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D209" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.04999994, -8.381903e-09, 4.440892e-15, -8.218578e-16, -2.1855695e-09, 1, 8.381903e-09, 0.04999994, 4.371129e-08, 10.399989, 0.051, -69.65799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D210" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.04999994, -8.381903e-09, 4.440892e-15, -8.218578e-16, -2.1855695e-09, 1, 8.381903e-09, 0.04999994, 4.371129e-08, 10.899989, 0.051, -68.35799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D211" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.04999994, -8.381903e-09, 4.440892e-15, -8.218578e-16, -2.1855695e-09, 1, 8.381903e-09, 0.04999994, 4.371129e-08, 10.399989, 0.051, -66.85799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D212" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.04999994, -8.381903e-09, 4.440892e-15, -8.218578e-16, -2.1855695e-09, 1, 8.381903e-09, 0.04999994, 4.371129e-08, 10.699989, 0.051, -65.25799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D213" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.04999994, -8.381903e-09, 4.440892e-15, -8.218578e-16, -2.1855695e-09, 1, 8.381903e-09, 0.04999994, 4.371129e-08, 10.199989, 0.051, -63.857986)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D214" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.04999994, -8.381903e-09, 4.440892e-15, -8.218578e-16, -2.1855695e-09, 1, 8.381903e-09, 0.04999994, 4.371129e-08, 10.699989, 0.051, -62.657986)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D215" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.04330122, 0.024999961, 2.1855646e-08, -8.2185775e-16, -2.1855695e-09, 1, -0.024999961, 0.04330122, 3.785508e-08, 10.199989, 0.051, -61.357986)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D216" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.0353553, 0.035355285, 3.090855e-08, -7.449393e-16, -2.1855695e-09, 1, -0.035355285, 0.0353553, 3.0908545e-08, 11.099989, 0.051, -60.557987)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D217" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.024999974, 0.043301202, 3.7855074e-08, -7.4493927e-16, -2.1855693e-09, 0.99999994, -0.043301202, 0.024999974, 2.1855636e-08, 11.499989, 0.051, -59.557987)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D218" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.024999974, 0.043301202, 3.7855074e-08, -7.4493927e-16, -2.1855693e-09, 0.99999994, -0.043301202, 0.024999974, 2.1855636e-08, 12.199988, 0.051, -59.95799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D219" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.012940944, 0.048296217, 4.222185e-08, -6.680209e-16, -2.1855693e-09, 0.99999994, -0.048296217, 0.012940944, 1.13133085e-08, 13.399988, 0.051, -59.35799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D220" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.012940944, 0.048296217, 4.222185e-08, -6.680209e-16, -2.1855693e-09, 0.99999994, -0.048296217, 0.012940944, 1.13133085e-08, 14.499989, 0.051, -59.65799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D221" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(0.012940944, 0.048296217, 4.222185e-08, -6.680209e-16, -2.1855693e-09, 0.99999994, -0.048296217, 0.012940944, 1.13133085e-08, 15.799989, 0.051, -58.757988)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D222" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(1.21071935e-08, 0.049999923, 4.3711275e-08, -7.1091655e-16, -2.1855693e-09, 0.99999994, -0.049999923, 1.21071935e-08, 0, 17.099989, 0.051, -58.95799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D223" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(1.21071935e-08, 0.049999923, 4.3711275e-08, -7.1091655e-16, -2.1855693e-09, 0.99999994, -0.049999923, 1.21071935e-08, 0, 18.499989, 0.051, -58.45799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D224" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(1.21071935e-08, 0.049999923, 4.3711275e-08, -7.1091655e-16, -2.1855693e-09, 0.99999994, -0.049999923, 1.21071935e-08, 0, 19.799988, 0.051, -59.057987)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D225" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(1.21071935e-08, 0.049999923, 4.3711275e-08, -7.1091655e-16, -2.1855693e-09, 0.99999994, -0.049999923, 1.21071935e-08, 0, 21.099987, 0.051, -58.657986)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D226" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(1.21071935e-08, 0.049999923, 4.3711275e-08, -7.1091655e-16, -2.1855693e-09, 0.99999994, -0.049999923, 1.21071935e-08, 0, 22.599987, 0.051, -59.357986)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D227" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(1.21071935e-08, 0.049999923, 4.3711275e-08, -7.1091655e-16, -2.1855693e-09, 0.99999994, -0.049999923, 1.21071935e-08, 0, 23.799988, 0.051, -59.157986)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D228" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(1.21071935e-08, 0.049999923, 4.3711275e-08, -7.1091655e-16, -2.1855693e-09, 0.99999994, -0.049999923, 1.21071935e-08, 0, 25.299988, 0.051, -59.757984)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D229" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(1.21071935e-08, 0.049999923, 4.3711275e-08, -7.1091655e-16, -2.1855693e-09, 0.99999994, -0.049999923, 1.21071935e-08, 0, 26.699987, 0.051, -59.357983)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D230" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(1.21071935e-08, 0.049999923, 4.3711275e-08, -7.1091655e-16, -2.1855693e-09, 0.99999994, -0.049999923, 1.21071935e-08, 0, 28.299988, 0.051, -59.757984)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D231" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(1.21071935e-08, 0.049999923, 4.3711275e-08, -7.1091655e-16, -2.1855693e-09, 0.99999994, -0.049999923, 1.21071935e-08, 0, 29.599987, 0.051, -59.457985)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D232" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(1.21071935e-08, 0.049999923, 4.3711275e-08, -7.1091655e-16, -2.1855693e-09, 0.99999994, -0.049999923, 1.21071935e-08, 0, 30.799988, 0.051, -60.057983)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D233" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(1.21071935e-08, 0.049999923, 4.3711275e-08, -7.1091655e-16, -2.1855693e-09, 0.99999994, -0.049999923, 1.21071935e-08, 0, 31.899988, 0.051, -59.857983)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D234" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.012940922, 0.048296224, 4.2221853e-08, -7.109166e-16, -2.1855693e-09, 0.99999994, -0.048296224, -0.012940922, -1.1313311e-08, 32.599987, 0.051, -60.15798)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D235" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.024999954, 0.043301214, 3.7855077e-08, -7.109166e-16, -2.1855693e-09, 0.99999994, -0.043301214, -0.024999954, -2.185564e-08, 33.299988, 0.051, -59.857983)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D236" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.043301202, 0.024999972, 2.1855637e-08, -7.109166e-16, -2.1855693e-09, 0.99999994, -0.024999972, -0.043301202, -3.785508e-08, 33.599987, 0.051, -60.45798)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D237" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.048296217, 0.012940944, 1.1313305e-08, -7.22816e-16, -2.1855695e-09, 0.99999994, -0.012940944, -0.048296217, -4.2221856e-08, 34.099987, 0.051, -60.75798)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D238" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999923, 1.21071935e-08, -5.3290705e-15, -7.6571164e-16, -2.1855695e-09, 0.99999994, -1.21071935e-08, -0.049999923, -4.3711278e-08, 33.799988, 0.051, -61.35798)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D239" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999923, 1.21071935e-08, -5.3290705e-15, -7.6571164e-16, -2.1855695e-09, 0.99999994, -1.21071935e-08, -0.049999923, -4.3711278e-08, 34.099987, 0.051, -62.157978)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D240" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999923, 1.21071935e-08, -5.3290705e-15, -7.6571164e-16, -2.1855695e-09, 0.99999994, -1.21071935e-08, -0.049999923, -4.3711278e-08, 33.899986, 0.051, -63.35798)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D241" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999923, 1.21071935e-08, -5.3290705e-15, -7.6571164e-16, -2.1855695e-09, 0.99999994, -1.21071935e-08, -0.049999923, -4.3711278e-08, 34.399986, 0.051, -64.15798)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D242" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999923, 1.21071935e-08, -5.3290705e-15, -7.6571164e-16, -2.1855695e-09, 0.99999994, -1.21071935e-08, -0.049999923, -4.3711278e-08, 34.399986, 0.051, -65.55798)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D243" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999923, 1.21071935e-08, -5.3290705e-15, -7.6571164e-16, -2.1855695e-09, 0.99999994, -1.21071935e-08, -0.049999923, -4.3711278e-08, 34.999985, 0.051, -67.05798)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D244" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.049999923, 1.21071935e-08, -5.3290705e-15, -7.6571164e-16, -2.1855695e-09, 0.99999994, -1.21071935e-08, -0.049999923, -4.3711278e-08, 34.899986, 0.051, -68.957985)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D245" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.043301202, 0.024999976, 2.1855636e-08, -7.657117e-16, -2.1855695e-09, 0.99999994, -0.024999976, -0.043301202, -3.785508e-08, 35.399986, 0.051, -69.85799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D246" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(-0.024999954, 0.043301217, 3.7855074e-08, -6.887933e-16, -2.1855695e-09, 0.99999994, -0.043301217, -0.024999954, -2.1855646e-08, 35.799988, 0.051, -70.65799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D247" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(1.3038516e-08, 0.049999926, 4.3711275e-08, -7.0069255e-16, -2.1855693e-09, 0.99999994, -0.049999926, 1.3038516e-08, -8.881784e-15, 36.799988, 0.051, -70.35799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D248" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(1.3038516e-08, 0.049999926, 4.3711275e-08, -7.0069255e-16, -2.1855693e-09, 0.99999994, -0.049999926, 1.3038516e-08, -8.881784e-15, 37.599987, 0.051, -70.75799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D249" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(1.3038516e-08, 0.049999926, 4.3711275e-08, -7.0069255e-16, -2.1855693e-09, 0.99999994, -0.049999926, 1.3038516e-08, -8.881784e-15, 38.99999, 0.051, -70.25799)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D250" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(1.3038516e-08, 0.049999926, 4.3711275e-08, -7.0069255e-16, -2.1855693e-09, 0.99999994, -0.049999926, 1.3038516e-08, -8.881784e-15, 40.39999, 0.051, -70.957985)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D251" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(1.3038516e-08, 0.049999926, 4.3711275e-08, -7.0069255e-16, -2.1855693e-09, 0.99999994, -0.049999926, 1.3038516e-08, -8.881784e-15, 41.89999, 0.051, -70.457985)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Sprite3D252" type="Sprite3D" parent="Paw Trail"]
 transform = Transform3D(1.3038516e-08, 0.049999926, 4.3711275e-08, -7.0069255e-16, -2.1855693e-09, 0.99999994, -0.049999926, 1.3038516e-08, -8.881784e-15, 43.29999, 0.051, -71.05798)
-modulate = Color(0.61745477, 0.61745477, 0.6174547, 1)
+cast_shadow = 0
+modulate = Color(0.19644919, 0.16633952, 0.091023035, 1)
 texture = ExtResource("3_6e8at")
 
 [node name="Boss Door" type="Node3D" parent="."]
@@ -3407,4 +3651,77 @@ stream = ExtResource("7_vtync")
 autoplay = true
 max_polyphony = 2
 
+[node name="Pause_Menu" type="Node2D" parent="."]
+process_mode = 2
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Pause_Menu"]
+offset_left = 614.0
+offset_top = 299.0
+offset_right = 654.0
+offset_bottom = 339.0
+scale = Vector2(17.332542, 11.039999)
+color = Color(0.37828982, 0.74889493, 0.67451066, 1)
+
+[node name="Button_manager" type="Control" parent="Pause_Menu/ColorRect"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.000004
+scale = Vector2(0.9957475, 1)
+
+[node name="Resume" type="Button" parent="Pause_Menu/ColorRect/Button_manager"]
+top_level = true
+layout_mode = 0
+offset_left = 782.00006
+offset_top = 322.0
+offset_right = 861.00006
+offset_bottom = 353.0
+scale = Vector2(3.8234158, 3.4783568)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_color = Color(6.738305e-07, 0.5916015, 0.60168046, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_h3cb0")
+text = "Continue"
+flat = true
+alignment = 0
+
+[node name="Menu" type="Button" parent="Pause_Menu/ColorRect/Button_manager"]
+top_level = true
+layout_mode = 0
+offset_left = 782.0
+offset_top = 437.0
+offset_right = 878.0
+offset_bottom = 468.0
+scale = Vector2(3.8234158, 3.4783568)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_color = Color(6.738305e-07, 0.5916015, 0.60168046, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_h3cb0")
+text = "Main menu"
+flat = true
+alignment = 0
+
+[node name="Close" type="Button" parent="Pause_Menu/ColorRect/Button_manager"]
+top_level = true
+layout_mode = 0
+offset_left = 782.0
+offset_top = 550.0
+offset_right = 845.0
+offset_bottom = 581.0
+scale = Vector2(3.8234158, 3.4783568)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 1, 1)
+theme_override_colors/font_hover_color = Color(6.738305e-07, 0.5916015, 0.60168046, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_h3cb0")
+text = "Exit
+"
+flat = true
+alignment = 0
+
 [connection signal="body_entered" from="Boss Door/Enterance Trigger" to="." method="_on_enterance_trigger_body_entered"]
+[connection signal="pressed" from="Pause_Menu/ColorRect/Button_manager/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Pause_Menu/ColorRect/Button_manager/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Pause_Menu/ColorRect/Button_manager/Close" to="." method="_on_close_pressed"]
