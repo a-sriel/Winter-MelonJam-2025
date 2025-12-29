@@ -1,0 +1,66 @@
+[gd_scene load_steps=8 format=3 uid="uid://cfvls1g6ifaa2"]
+
+[ext_resource type="Script" uid="uid://dshulmq5g8noq" path="res://Scenes/Pie/pie_refiller.gd" id="1_okabm"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_sdtok"]
+height = 0.46342772
+radius = 0.19999999
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_okabm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rurxl"]
+albedo_color = Color(0.33094454, 0.20825666, 0.012611075, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ubbto"]
+albedo_color = Color(0.32941177, 0.20784314, 0.011764706, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j5q2p"]
+albedo_color = Color(0.32156864, 0, 0.54509807, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_okabm"]
+height = 0.52250004
+radius = 0.21
+
+[node name="Pie Refiller" type="RigidBody3D"]
+collision_layer = 0
+collision_mask = 9
+mass = 9999999.0
+script = ExtResource("1_okabm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21985838, 0)
+shape = SubResource("CylinderShape3D_sdtok")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.7, 0, 0, 0, 1, 0, 0.21249998, 0)
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CSGCombiner3D"]
+material_override = SubResource("StandardMaterial3D_okabm")
+radius = 0.2
+height = 0.675
+material = SubResource("StandardMaterial3D_rurxl")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15937501, 0)
+operation = 2
+radius = 0.17
+height = 0.51875
+material = SubResource("StandardMaterial3D_ubbto")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10984376, 0)
+radius = 0.17
+height = 0.4196875
+material = SubResource("StandardMaterial3D_j5q2p")
+
+[node name="Refill Zone" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Refill Zone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22375, 0)
+shape = SubResource("CylinderShape3D_okabm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Refill Zone" to="." method="_on_area_3d_body_entered"]

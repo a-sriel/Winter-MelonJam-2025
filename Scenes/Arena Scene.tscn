@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://desfra8sypdg2"]
+[gd_scene load_steps=18 format=3 uid="uid://desfra8sypdg2"]
 
 [ext_resource type="Script" uid="uid://cdw3owg6apqrp" path="res://Scenes/arena_scene.gd" id="1_6udvb"]
 [ext_resource type="PackedScene" uid="uid://drdpvnbqqh62w" path="res://Scenes/Entities/Cake Master.tscn" id="2_gs72q"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://hd3212swtnsc" path="res://Assets/Objects/Shroom.fbx" id="7_3ke27"]
 [ext_resource type="PackedScene" uid="uid://b0x346a5hwjru" path="res://Scenes/Entities/Ferrets/Ferret Yellow.tscn" id="8_twcri"]
 [ext_resource type="AudioStream" uid="uid://t8ut8sfpogau" path="res://Assets/Audio/Music/MUSIC_Western_AcousticGuitars1_110BPM_Loop.wav" id="9_6udvb"]
+[ext_resource type="PackedScene" uid="uid://cfvls1g6ifaa2" path="res://Scenes/Pie/Pie_Refiller.tscn" id="10_32763"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wk04j"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -227,6 +228,10 @@ text = "Exit
 "
 flat = true
 alignment = 0
+
+[node name="Pie Refiller" parent="." instance=ExtResource("10_32763")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3, 0, 15.5)
+mass = 20.0
 
 [connection signal="pressed" from="Pause_Menu/ColorRect/Button_manager/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="Pause_Menu/ColorRect/Button_manager/Menu" to="." method="_on_menu_pressed"]

@@ -126,3 +126,7 @@ func take_shove_from(dir:Vector3, force:float) -> void:
 func update_pie_scale() -> void:
 	var pie_scale = pie_count * .04
 	pie.scale = Vector3(pie_scale, pie_scale, pie_scale)
+
+func refill_pies(amount:int) -> void:
+	pie_count += amount
+	update_pie_scale()

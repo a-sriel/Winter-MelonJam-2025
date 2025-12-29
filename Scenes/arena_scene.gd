@@ -1,6 +1,6 @@
 extends Node3D
 
-func _unhandled_input(event: InputEvent) -> void:
+func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_key_pressed(KEY_ESCAPE):
 		get_tree().paused = true
 		$Pause_Menu.show()
